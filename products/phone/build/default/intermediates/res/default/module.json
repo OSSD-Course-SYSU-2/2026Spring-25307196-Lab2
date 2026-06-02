@@ -52,6 +52,15 @@
 				"startWindowIconId":	67108919,
 				"startWindowBackgroundId":	67108876
 			}],
+		"requestPermissions":	[{
+				"name":	"ohos.permission.DISTRIBUTED_DATASYNC",
+				"reason":	"$string:permission_distributed_datasync_reason",
+				"usedScene":	{
+					"abilities":	["EntryAbility"],
+					"when":	"inuse"
+				},
+				"reasonId":	67109450
+			}],
 		"packageName":	"phone",
 		"virtualMachine":	"ark12.0.6.0",
 		"compileMode":	"esmodule",

@@ -4,10 +4,12 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
 interface TabContentView_Params {
     currentBreakpoint?: string;
     currentIndex?: number;
+    showContinuePanel?: boolean;
     tabBarsInfo?: TabBarViewModel;
 }
 import { BreakpointConstants as Breakpoint, CommonConstants as Common } from "@normalized:N&&&base/Index&1.0.0";
 import { HotPointPage } from "@normalized:N&&&hot/Index&1.0.0";
+import { ContinueButtonView, ContinuePanelView } from "@normalized:N&&&detail/Index&1.0.0";
 import type { BarItemInterface } from '../model/TabBarModel';
 import { TabBarViewModel } from "@normalized:N&&&phone/src/main/ets/viewmodel/TabBarViewModel&";
 export class TabContentView extends ViewPU {
@@ -18,6 +20,7 @@ export class TabContentView extends ViewPU {
         }
         this.__currentBreakpoint = this.createStorageLink('currentBreakpoint', Breakpoint.BREAKPOINT_LG, "currentBreakpoint");
         this.__currentIndex = new ObservedPropertySimplePU(1, this, "currentIndex");
+        this.__showContinuePanel = new ObservedPropertySimplePU(false, this, "showContinuePanel");
         this.tabBarsInfo = new TabBarViewModel();
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
@@ -25,6 +28,9 @@ export class TabContentView extends ViewPU {
     setInitiallyProvidedValue(params: TabContentView_Params) {
         if (params.currentIndex !== undefined) {
             this.currentIndex = params.currentIndex;
+        }
+        if (params.showContinuePanel !== undefined) {
+            this.showContinuePanel = params.showContinuePanel;
         }
         if (params.tabBarsInfo !== undefined) {
             this.tabBarsInfo = params.tabBarsInfo;
@@ -35,10 +41,12 @@ export class TabContentView extends ViewPU {
     purgeVariableDependenciesOnElmtId(rmElmtId) {
         this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
         this.__currentIndex.purgeDependencyOnElmtId(rmElmtId);
+        this.__showContinuePanel.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__currentBreakpoint.aboutToBeDeleted();
         this.__currentIndex.aboutToBeDeleted();
+        this.__showContinuePanel.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -55,6 +63,13 @@ export class TabContentView extends ViewPU {
     }
     set currentIndex(newValue: number) {
         this.__currentIndex.set(newValue);
+    }
+    private __showContinuePanel: ObservedPropertySimplePU<boolean>;
+    get showContinuePanel() {
+        return this.__showContinuePanel.get();
+    }
+    set showContinuePanel(newValue: boolean) {
+        this.__showContinuePanel.set(newValue);
     }
     private tabBarsInfo: TabBarViewModel;
     TabBarBuilder(item: BarItemInterface, index: number, parent = null) {
@@ -95,6 +110,11 @@ export class TabContentView extends ViewPU {
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Stack.create({ alignContent: Alignment.BottomEnd });
+            Stack.width('100%');
+            Stack.height('100%');
+        }, Stack);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
             Column.backgroundColor({ "id": 67108875, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Column.padding({ bottom: this.currentBreakpoint !== Breakpoint.BREAKPOINT_LG ? { "id": 67108899, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67108909, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } });
@@ -128,7 +148,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 67, col: 11 });
+                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 70, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -166,6 +186,75 @@ export class TabContentView extends ViewPU {
         TabContent.pop();
         Tabs.pop();
         Column.pop();
+        {
+            this.observeComponentCreation2((elmtId, isInitialRender) => {
+                if (isInitialRender) {
+                    let componentCall = new 
+                    // 流转悬浮按钮
+                    ContinueButtonView(this, { showContinuePanel: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 100, col: 7 });
+                    ViewPU.create(componentCall);
+                    let paramsLambda = () => {
+                        return {
+                            showContinuePanel: this.showContinuePanel
+                        };
+                    };
+                    componentCall.paramsGenerator_ = paramsLambda;
+                }
+                else {
+                    this.updateStateVarsOfChildByElmtId(elmtId, {});
+                }
+            }, { name: "ContinueButtonView" });
+        }
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            If.create();
+            // 流转面板
+            if (this.showContinuePanel) {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Column.create();
+                        Column.width('100%');
+                        Column.height('100%');
+                        Column.backgroundColor('rgba(0, 0, 0, 0.4)');
+                        Column.onClick(() => {
+                            this.showContinuePanel = false;
+                        });
+                    }, Column);
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Blank.create();
+                    }, Blank);
+                    Blank.pop();
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        __Common__.create();
+                        __Common__.height('70%');
+                    }, __Common__);
+                    {
+                        this.observeComponentCreation2((elmtId, isInitialRender) => {
+                            if (isInitialRender) {
+                                let componentCall = new ContinuePanelView(this, { isVisible: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 107, col: 11 });
+                                ViewPU.create(componentCall);
+                                let paramsLambda = () => {
+                                    return {
+                                        isVisible: this.showContinuePanel
+                                    };
+                                };
+                                componentCall.paramsGenerator_ = paramsLambda;
+                            }
+                            else {
+                                this.updateStateVarsOfChildByElmtId(elmtId, {});
+                            }
+                        }, { name: "ContinuePanelView" });
+                    }
+                    __Common__.pop();
+                    Column.pop();
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                });
+            }
+        }, If);
+        If.pop();
+        Stack.pop();
     }
     rerender() {
         this.updateDirtyElements();

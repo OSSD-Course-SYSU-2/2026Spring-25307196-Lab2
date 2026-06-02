@@ -38,3 +38,7 @@ export { AIPolishStyleView } from './src/main/ets/view/AIPolishStyleView';
 export { AIQualityAnalysisView } from './src/main/ets/view/AIQualityAnalysisView';
 
 export { AIPolishService } from './src/main/ets/service/AIPolishService';
+
+export { ContinuePanelView } from './src/main/ets/view/ContinuePanelView';
+
+export { ContinueButtonView } from './src/main/ets/view/ContinueButtonView';

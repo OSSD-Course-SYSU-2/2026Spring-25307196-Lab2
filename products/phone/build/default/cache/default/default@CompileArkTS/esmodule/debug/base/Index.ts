@@ -12,3 +12,7 @@ export type { CardItemInterface } from "@normalized:N&&&base/src/main/ets/model/
 export { PICTURE_ARRAY_LIST } from "@normalized:N&&&base/src/main/ets/model/PictureArrayModel&1.0.0";
 export { PolishStyle, SentimentLabel, IssueType, IssueSeverity, ReadabilityLevel, POLISH_STYLE_CONFIGS, DEFAULT_POLISH_OPTIONS } from "@normalized:N&&&base/src/main/ets/model/AICommentModel&1.0.0";
 export type { PolishStyleConfig, PolishResult, SentimentInfo, QualityAnalysisResult, QualityIssue, TextPosition, SimilarComment, ReadabilityInfo, PolishHistory, AIPolishRequest, PolishOptions, AIPolishResponse, AIError } from "@normalized:N&&&base/src/main/ets/model/AICommentModel&1.0.0";
+export { DeviceType, DeviceState, ContinueType, ContinueState } from "@normalized:N&&&base/src/main/ets/model/ContinueModel&1.0.0";
+export type { DeviceInfo, ContinueData, AppState, ContinueListener, ContinueOptions } from "@normalized:N&&&base/src/main/ets/model/ContinueModel&1.0.0";
+export { DeviceManagerService } from "@normalized:N&&&base/src/main/ets/service/DeviceManagerService&1.0.0";
+export { ContinueService } from "@normalized:N&&&base/src/main/ets/service/ContinueService&1.0.0";

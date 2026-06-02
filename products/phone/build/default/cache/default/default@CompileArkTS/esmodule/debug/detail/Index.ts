@@ -11,3 +11,5 @@ export { AIPolishResultView } from "@normalized:N&&&detail/src/main/ets/view/AIP
 export { AIPolishStyleView } from "@normalized:N&&&detail/src/main/ets/view/AIPolishStyleView&1.0.0";
 export { AIQualityAnalysisView } from "@normalized:N&&&detail/src/main/ets/view/AIQualityAnalysisView&1.0.0";
 export { AIPolishService } from "@normalized:N&&&detail/src/main/ets/service/AIPolishService&1.0.0";
+export { ContinuePanelView } from "@normalized:N&&&detail/src/main/ets/view/ContinuePanelView&1.0.0";
+export { ContinueButtonView } from "@normalized:N&&&detail/src/main/ets/view/ContinueButtonView&1.0.0";

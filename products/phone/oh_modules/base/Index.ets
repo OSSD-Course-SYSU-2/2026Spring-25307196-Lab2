@@ -55,3 +55,19 @@ export {
   POLISH_STYLE_CONFIGS,
   DEFAULT_POLISH_OPTIONS
 } from './src/main/ets/model/AICommentModel';
+
+export {
+  DeviceType,
+  DeviceState,
+  ContinueType,
+  ContinueState,
+  DeviceInfo,
+  ContinueData,
+  AppState,
+  ContinueListener,
+  ContinueOptions
+} from './src/main/ets/model/ContinueModel';
+
+export { DeviceManagerService } from './src/main/ets/service/DeviceManagerService';
+
+export { ContinueService } from './src/main/ets/service/ContinueService';

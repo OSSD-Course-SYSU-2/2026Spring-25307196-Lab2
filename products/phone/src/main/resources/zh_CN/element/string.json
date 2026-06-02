@@ -27,6 +27,10 @@
     {
       "name": "mine",
       "value": "我的"
+    },
+    {
+      "name": "permission_distributed_datasync_reason",
+      "value": "用于设备间的数据同步和流转功能"
     }
   ]
 }

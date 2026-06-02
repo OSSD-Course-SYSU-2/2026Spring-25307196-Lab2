@@ -2,7 +2,7 @@
 
 ## 项目简介
 
-基于自适应布局和响应式布局，实现一次开发，多端部署的社区评论页。
+基于自适应布局和响应式布局，实现一次开发，多端部署，支持自由流转的社区评论页。
 
 ## 效果预览
 直板机运行效果图如下：
@@ -24,6 +24,7 @@
 - 响应式布局：当外部容器大小发生变化时，元素可以根据断点、栅格或特定的特征（如屏幕方向、窗口宽高等）自动变化以适应外部容器变化的布局能力。
 - GridRow：栅格容器组件，仅可以和栅格子组件（GridCol）在栅格布局场景中使用。
 - GridCol：栅格子组件，必须作为栅格容器组件（GridRow）的子组件使用。
+- 自由流转功能：支持多设备间的应用流转，实现跨设备无缝体验。三种流转模式：(1)迁移：将应用从当前设备迁移到目标设备继续使用；(2)协同：多设备协同工作，实现跨设备互动；(3)同步：将应用状态同步到其他设备。设备类型识别：手机、平板、折叠屏、智慧屏。
 
 ## 使用说明
 
@@ -91,8 +92,12 @@
 │  │  ├──AICommentModel.ets                        // AI评论实体类
 │  │  ├──CardListModel.ets                         // 卡片实体类
 │  │  ├──CommentModel.ets                          // 评论实体类（含观点站队、情绪分析、质量判断数据）
+│  │  ├──ContinueModel.ets                         // 流转功能实体类
 │  │  ├──HotModel.ets                              // 热搜实体类
 │  │  └──PictureArrayModel.ets                     // 图片实体类
+│  ├──service
+│  │  ├──DeviceManagerService.ets                  // 分布式设备管理服务
+│  │  └──ContinueService.ets                       // 流转业务服务
 │  ├──utils
 │  │  └──Logger.ets                                // 日志工具类
 │  └──viewmodel
@@ -114,6 +119,8 @@
 │  │  │  ├──CommentItemView.ets                    // 评论项
 │  │  │  ├──CommentListView.ets                    // 评论列表
 │  │  │  ├──CommentQualityView.ets                 // 评论质量判断组件
+│  │  │  ├──ContinueButtonView.ets                 // 流转悬浮按钮组件
+│  │  │  ├──ContinuePanelView.ets                  // 流转面板组件
 │  │  │  ├──DetailPage.ets                         // 详情页
 │  │  │  ├──DetailPageWithAI.ets                   // AI增强详情页
 │  │  │  ├──DetailTitleView.ets                    // 详情页标题栏
@@ -197,9 +204,27 @@
   - 评论列表中自动展示媒体内容，支持多图网格布局
   - 点击媒体可放大预览，视频支持播放控制
 
+#### 自由流转功能
+- **组件**: `ContinueButtonView.ets`（流转按钮）、`ContinuePanelView.ets`（流转面板）
+- **服务**: `DeviceManagerService.ets`（设备管理）、`ContinueService.ets`（流转服务）
+- **数据结构**: 
+  - `DeviceInfo`接口（设备信息）
+  - `ContinueData`接口（流转数据）
+  - `ContinueType`枚举（迁移、协同、同步）
+  - `ContinueState`枚举（流转状态）
+- **实现方式**:
+  - 使用HarmonyOS分布式设备管理API发现和连接设备
+  - 主界面右下角显示流转悬浮按钮，点击打开流转面板
+  - 流转面板展示可用设备列表，支持选择流转类型
+  - 实现三种流转模式：迁移（跨设备继续使用）、协同（多设备协同）、同步（状态同步）
+  - 实时显示流转进度和状态，支持取消操作
+  - 使用监听器模式实现状态变化通知
+
 ## 相关权限
 
-不涉及。
+需要以下权限：
+- `ohos.permission.DISTRIBUTED_DATASYNC`：分布式数据同步权限
+- `ohos.permission.GET_DISTRIBUTED_DEVICE_INFO`：获取分布式设备信息权限
 
 ## 约束与限制
 

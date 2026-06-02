@@ -56,6 +56,18 @@
 				]
 			}
 		],
+		"requestPermissions": [
+			{
+				"name": "ohos.permission.DISTRIBUTED_DATASYNC",
+				"reason": "$string:permission_distributed_datasync_reason",
+				"usedScene": {
+					"abilities": [
+						"EntryAbility"
+					],
+					"when": "inuse"
+				}
+			}
+		],
 		"packageName": "phone",
 		"virtualMachine": "ark12.0.6.0",
 		"compileMode": "esmodule",

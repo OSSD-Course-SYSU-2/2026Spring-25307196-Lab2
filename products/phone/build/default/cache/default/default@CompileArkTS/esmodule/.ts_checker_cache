@@ -38,7 +38,11 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\startAbilityParameter.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.bundle.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\AppServiceExtensionContext.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\embedded_component.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\embedded_component.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\triggerInfo.d.ts"
       ],
       "error": false
     },
@@ -98,7 +102,10 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.security.cert.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.security.cryptoFramework.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.distributedDeviceManager.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts"
       ],
       "error": false
     },
@@ -118,7 +125,9 @@
       "children": [],
       "parent": [
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\entryability\\EntryAbility.ets",
-        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\utils\\Logger.ets"
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\utils\\Logger.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets"
       ],
       "error": false
     },
@@ -160,7 +169,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\commons\\base\\Index.ets": {
-      "mtimeMs": 1778579852315.9753,
+      "mtimeMs": 1780390897032.4265,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\constants\\BreakpointConstants.ets",
         "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\constants\\BreakpointType.ets",
@@ -172,7 +181,10 @@
         "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\utils\\Logger.ets",
         "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\CardListModel.ets",
         "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\PictureArrayModel.ets",
-        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\AICommentModel.ets"
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\AICommentModel.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\ContinueModel.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets"
       ],
       "parent": [
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\entryability\\EntryAbility.ets",
@@ -209,7 +221,9 @@
         "F:\\MultiCommunityApplication\\features\\hot\\src\\main\\ets\\view\\HotTitleView.ets",
         "F:\\MultiCommunityApplication\\features\\hot\\src\\main\\ets\\view\\SearchBarView.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\MediaGalleryView.ets",
-        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\MediaPickerView.ets"
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\MediaPickerView.ets",
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinuePanelView.ets",
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets"
       ],
       "error": false
     },
@@ -1675,7 +1689,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\features\\detail\\Index.ets": {
-      "mtimeMs": 1776784353895.8938,
+      "mtimeMs": 1780390856401.484,
       "children": [
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\DetailPage.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\CommentBarView.ets",
@@ -1689,13 +1703,16 @@
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\AIPolishResultView.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\AIPolishStyleView.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\AIQualityAnalysisView.ets",
-        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\service\\AIPolishService.ets"
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\service\\AIPolishService.ets",
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinuePanelView.ets",
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets"
       ],
       "parent": [
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MainPage.ets",
         "F:\\MultiCommunityApplication\\features\\picture\\src\\main\\ets\\view\\PictureDetail.ets",
         "F:\\MultiCommunityApplication\\features\\picture\\src\\main\\ets\\view\\DetailVerticalView.ets",
-        "F:\\MultiCommunityApplication\\features\\hot\\src\\main\\ets\\view\\FoundView.ets"
+        "F:\\MultiCommunityApplication\\features\\hot\\src\\main\\ets\\view\\FoundView.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets"
       ],
       "error": false
     },
@@ -1722,10 +1739,11 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets": {
-      "mtimeMs": 1774267850000,
+      "mtimeMs": 1780390805142.486,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
         "F:\\MultiCommunityApplication\\features\\hot\\Index.ets",
+        "F:\\MultiCommunityApplication\\features\\detail\\Index.ets",
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\model\\TabBarModel.ets",
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\viewmodel\\TabBarViewModel.ets"
       ],
@@ -2703,6 +2721,130 @@
       ],
       "parent": [
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\CommentInputView.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\ContinueModel.ets": {
+      "mtimeMs": 1780390380800.7898,
+      "children": [],
+      "parent": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets": {
+      "mtimeMs": 1780392859120.3965,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.distributedDeviceManager.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.hilog.d.ts",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\ContinueModel.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets"
+      ],
+      "error": true,
+      "errorCodes": [
+        28007
+      ]
+    },
+    "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets": {
+      "mtimeMs": 1780392636662.7441,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.distributedDeviceManager.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.hilog.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\model\\ContinueModel.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.distributedDeviceManager.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\DeviceManagerService.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.Want.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\triggerInfo.d.ts"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\commons\\base\\src\\main\\ets\\service\\ContinueService.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.Want.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\triggerInfo.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.Want.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.Want.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\triggerInfo.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\wantAgent\\wantAgentInfo.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinuePanelView.ets": {
+      "mtimeMs": 1780392992476.5115,
+      "children": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\features\\detail\\Index.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets": {
+      "mtimeMs": 1780390734812.296,
+      "children": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\features\\detail\\Index.ets"
       ],
       "error": false
     }

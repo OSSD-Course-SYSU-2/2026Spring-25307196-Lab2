@@ -100,6 +100,7 @@ string name_8 0x04000137
 string name_9 0x04000138
 string news_hot_search 0x04000139
 string next 0x04000239
+string permission_distributed_datasync_reason 0x0400024a
 string placeholder 0x0400005d
 string ran_sub_title 0x04000209
 string rank_title 0x0400020a

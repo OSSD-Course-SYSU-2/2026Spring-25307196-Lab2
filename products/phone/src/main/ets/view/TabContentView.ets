@@ -15,6 +15,7 @@
 
 import { BreakpointConstants as Breakpoint, CommonConstants as Common } from 'base';
 import { HotPointPage } from 'hot';
+import { ContinueButtonView, ContinuePanelView } from 'detail';
 import { BarItemInterface } from '../model/TabBarModel';
 import { TabBarViewModel } from '../viewmodel/TabBarViewModel';
 
@@ -22,6 +23,7 @@ import { TabBarViewModel } from '../viewmodel/TabBarViewModel';
 export struct TabContentView {
   @StorageLink('currentBreakpoint') currentBreakpoint: string = Breakpoint.BREAKPOINT_LG;
   @State currentIndex: number = 1;
+  @State showContinuePanel: boolean = false;
   tabBarsInfo: TabBarViewModel = new TabBarViewModel();
 
   @Builder
@@ -53,44 +55,67 @@ export struct TabContentView {
   }
 
   build() {
-    Column() {
-      Tabs({
-        barPosition: this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ? BarPosition.Start : BarPosition.End,
-        index: this.currentIndex
-      }) {
-        TabContent() {
-          this.DefaultTabBuilder($r('app.string.main'))
-        }
-        .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[0], 0))
+    Stack({ alignContent: Alignment.BottomEnd }) {
+      Column() {
+        Tabs({
+          barPosition: this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ? BarPosition.Start : BarPosition.End,
+          index: this.currentIndex
+        }) {
+          TabContent() {
+            this.DefaultTabBuilder($r('app.string.main'))
+          }
+          .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[0], 0))
 
-        TabContent() {
-          HotPointPage()
-        }
-        .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[1], 1))
+          TabContent() {
+            HotPointPage()
+          }
+          .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[1], 1))
 
-        TabContent() {
-          this.DefaultTabBuilder($r('app.string.message'))
-        }
-        .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[2], 2))
+          TabContent() {
+            this.DefaultTabBuilder($r('app.string.message'))
+          }
+          .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[2], 2))
 
-        TabContent() {
-          this.DefaultTabBuilder($r('app.string.mine'))
+          TabContent() {
+            this.DefaultTabBuilder($r('app.string.mine'))
+          }
+          .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[3], 3))
         }
-        .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[3], 3))
+        .vertical(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG)
+        .onChange((index: number) => {
+          this.currentIndex = index;
+        })
+        .barHeight(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ? Common.HALF_PERCENT : $r('app.float.bar_height'))
+        .barWidth(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ?
+          $r('app.float.tab_bar_width') : Common.FULL_PERCENT)
+        .scrollable(false)
+        .height(Common.FULL_PERCENT)
       }
-      .vertical(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG)
-      .onChange((index: number) => {
-        this.currentIndex = index;
-      })
-      .barHeight(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ? Common.HALF_PERCENT : $r('app.float.bar_height'))
-      .barWidth(this.currentBreakpoint === Breakpoint.BREAKPOINT_LG ?
-        $r('app.float.tab_bar_width') : Common.FULL_PERCENT)
-      .scrollable(false)
+      .backgroundColor($r('app.color.bar_background_color'))
+      .padding({ bottom: this.currentBreakpoint !== Breakpoint.BREAKPOINT_LG ?
+        $r('app.float.tab_content_pb') : $r('app.float.zero') })
       .height(Common.FULL_PERCENT)
+
+      // 流转悬浮按钮
+      ContinueButtonView({ showContinuePanel: $showContinuePanel })
+
+      // 流转面板
+      if (this.showContinuePanel) {
+        Column() {
+          Blank()
+          
+          ContinuePanelView({ isVisible: $showContinuePanel })
+            .height('70%')
+        }
+        .width('100%')
+        .height('100%')
+        .backgroundColor('rgba(0, 0, 0, 0.4)')
+        .onClick(() => {
+          this.showContinuePanel = false;
+        })
+      }
     }
-    .backgroundColor($r('app.color.bar_background_color'))
-    .padding({ bottom: this.currentBreakpoint !== Breakpoint.BREAKPOINT_LG ?
-      $r('app.float.tab_content_pb') : $r('app.float.zero') })
-    .height(Common.FULL_PERCENT)
+    .width('100%')
+    .height('100%')
   }
 }

@@ -2343,5 +2343,9 @@
 			"type":	"media",
 			"name":	"ic_public_back_white",
 			"id":	"0x04000249"
+		}, {
+			"type":	"string",
+			"name":	"permission_distributed_datasync_reason",
+			"id":	"0x0400024A"
 		}]
 }
