@@ -144,6 +144,138 @@ export const FOLLOW_LIST: FollowItemInterface[] = [
         shareCount: 1557,
         viewCount: 57,
         favourCount: 1557
+    },
+    {
+        name: { "id": 67109466, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109104, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108938, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109110, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109454, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 2345,
+        viewCount: 890,
+        favourCount: 1890
+    },
+    {
+        name: { "id": 67109467, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109105, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108939, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109111, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109455, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 1876,
+        viewCount: 567,
+        favourCount: 2345
+    },
+    {
+        name: { "id": 67109468, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109106, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108940, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109112, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109456, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 987,
+        viewCount: 234,
+        favourCount: 876
+    },
+    {
+        name: { "id": 67109469, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109107, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67109465, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109113, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109457, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 3456,
+        viewCount: 1234,
+        favourCount: 2890
+    },
+    {
+        name: { "id": 67109470, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109108, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67109462, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109114, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109458, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 2109,
+        viewCount: 876,
+        favourCount: 1543
+    },
+    {
+        name: { "id": 67109471, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109103, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67109463, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109115, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109459, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 1567,
+        viewCount: 543,
+        favourCount: 1234
+    },
+    {
+        name: { "id": 67109472, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109104, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67109464, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109116, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109460, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 4567,
+        viewCount: 1890,
+        favourCount: 3456
+    },
+    {
+        name: { "id": 67109473, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109105, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108937, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109117, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109461, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 2890,
+        viewCount: 987,
+        favourCount: 2109
+    },
+    {
+        name: { "id": 67109474, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109106, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108938, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109109, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109451, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 1789,
+        viewCount: 654,
+        favourCount: 1567
+    },
+    {
+        name: { "id": 67109475, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109107, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108939, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109110, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109452, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 2345,
+        viewCount: 890,
+        favourCount: 1987
+    },
+    {
+        name: { "id": 67109476, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        icon: { "id": 67109108, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        date: { "id": 67108940, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        picture: { "id": 67109111, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        type: { "id": 67108953, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        subType: { "id": 67108952, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        content: { "id": 67109453, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" },
+        shareCount: 3210,
+        viewCount: 1234,
+        favourCount: 2789
     }
 ];
 export interface TitleDetailInterface {

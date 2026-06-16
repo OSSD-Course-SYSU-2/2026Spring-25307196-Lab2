@@ -324,5 +324,193 @@ export const COMMENT_LIST: CommentItemInterface[] = [
         height: 600
       } as MediaData
     ]
+  },
+  // 技术分析评论
+  {
+    icon: $r('app.media.ic_comment_1'),
+    name: $r('app.string.name_12'),
+    favorCount: 456,
+    content: '从技术角度分析，这张照片的曝光控制非常精准，高光和暗部细节都保留得很好。使用了渐变滤镜平衡天空和地面的光比，后期处理也很克制，没有过度调色。',
+    timePosition: $r('app.string.time_position_7'),
+    reviewCnt: 89,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.RATIONAL,
+      intensity: 85,
+      emotionDistribution: createEmotionDistribution(5, 30, 10, 70, 5)
+    } as EmotionData,
+    // 高质量评论
+    qualityData: {
+      quality: CommentQualityType.HIGH,
+      tags: ['技术分析', '专业评论'],
+      isFolded: false
+    } as QualityData
+  },
+  // 情感共鸣评论
+  {
+    icon: $r('app.media.ic_comment_2'),
+    name: $r('app.string.name_13'),
+    favorCount: 678,
+    content: '看到这张照片，想起了和爷爷一起在老家的日子。那时候院子里的老树也是这样，阳光洒下来，一切都那么安详。谢谢作者让我找回了这份珍贵的记忆。',
+    timePosition: $r('app.string.time_position_8'),
+    reviewCnt: 234,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.AGREE,
+      intensity: 75,
+      emotionDistribution: createEmotionDistribution(5, 65, 10, 15, 5)
+    } as EmotionData,
+    // 高质量评论
+    qualityData: {
+      quality: CommentQualityType.HIGH,
+      tags: ['情感共鸣'],
+      isFolded: false
+    } as QualityData
+  },
+  // 建设性批评
+  {
+    icon: $r('app.media.ic_comment_3'),
+    name: $r('app.string.name_14'),
+    favorCount: 234,
+    content: '整体构图不错，但有几个小建议：1. 前景的树枝有点抢眼，可以考虑后期处理一下；2. 地平线稍微有点倾斜，建议校正；3. 天空的云层可以再提亮一些，增加层次感。',
+    timePosition: $r('app.string.time_position_9'),
+    reviewCnt: 67,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.RATIONAL,
+      intensity: 70,
+      emotionDistribution: createEmotionDistribution(10, 20, 15, 60, 15)
+    } as EmotionData,
+    // 高质量评论
+    qualityData: {
+      quality: CommentQualityType.HIGH,
+      tags: ['建设性建议'],
+      isFolded: false
+    } as QualityData
+  },
+  // 简短赞美
+  {
+    icon: $r('app.media.ic_icon_1'),
+    name: $r('app.string.name_15'),
+    favorCount: 89,
+    content: '太美了！每一帧都是壁纸级别',
+    timePosition: $r('app.string.time_position_10'),
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.AGREE,
+      intensity: 65,
+      emotionDistribution: createEmotionDistribution(5, 55, 20, 10, 10)
+    } as EmotionData,
+    // 正常质量评论
+    qualityData: {
+      quality: CommentQualityType.NORMAL,
+      tags: [],
+      isFolded: false
+    } as QualityData
+  },
+  // 互动提问
+  {
+    icon: $r('app.media.ic_comment_4'),
+    name: $r('app.string.name_16'),
+    favorCount: 145,
+    content: '请问这是在哪个城市拍的？建筑风格很有特色，想了解一下背后的历史文化。另外拍摄时间是什么时候？光线看起来很特别。',
+    timePosition: $r('app.string.time_position_11'),
+    reviewCnt: 45,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.RATIONAL,
+      intensity: 60,
+      emotionDistribution: createEmotionDistribution(5, 25, 15, 45, 10)
+    } as EmotionData,
+    // 正常质量评论
+    qualityData: {
+      quality: CommentQualityType.NORMAL,
+      tags: [],
+      isFolded: false
+    } as QualityData
+  },
+  // 搞笑调侃
+  {
+    icon: $r('app.media.ic_comment_1'),
+    name: $r('app.string.name_17'),
+    favorCount: 567,
+    content: '这构图绝了！我上次去拍，三脚架还没架好，太阳就下山了😂 作者是不是有什么秘诀？求传授！',
+    timePosition: $r('app.string.time_position_12'),
+    reviewCnt: 123,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.TEASE,
+      intensity: 70,
+      emotionDistribution: createEmotionDistribution(5, 20, 60, 10, 5)
+    } as EmotionData,
+    // 正常质量评论
+    qualityData: {
+      quality: CommentQualityType.NORMAL,
+      tags: [],
+      isFolded: false
+    } as QualityData
+  },
+  // 专业设备讨论
+  {
+    icon: $r('app.media.ic_comment_2'),
+    name: $r('app.string.name_18'),
+    favorCount: 345,
+    content: '看EXIF信息应该是全画幅相机拍的，焦段在35-50mm之间，光圈不大不小正好。这种画质应该是中高端机型，镜头素质也不错。后期风格有点像胶片模拟。',
+    timePosition: $r('app.string.time_position_13'),
+    reviewCnt: 78,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.RATIONAL,
+      intensity: 75,
+      emotionDistribution: createEmotionDistribution(5, 20, 10, 70, 5)
+    } as EmotionData,
+    // 高质量评论
+    qualityData: {
+      quality: CommentQualityType.HIGH,
+      tags: ['器材分析'],
+      isFolded: false
+    } as QualityData
+  },
+  // 系列作品期待
+  {
+    icon: $r('app.media.ic_comment_3'),
+    name: $r('app.string.name_19'),
+    favorCount: 234,
+    content: '这个系列拍得太棒了！已经关注了，期待后续作品。建议可以出个拍摄手记，分享一下创作思路和拍摄过程，相信很多人会感兴趣。',
+    timePosition: $r('app.string.time_position_14'),
+    reviewCnt: 56,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.AGREE,
+      intensity: 70,
+      emotionDistribution: createEmotionDistribution(5, 60, 15, 15, 5)
+    } as EmotionData,
+    // 正常质量评论
+    qualityData: {
+      quality: CommentQualityType.NORMAL,
+      tags: [],
+      isFolded: false
+    } as QualityData
+  },
+  // 艺术角度点评
+  {
+    icon: $r('app.media.ic_icon_4'),
+    name: $r('app.string.name_20'),
+    favorCount: 456,
+    content: '从艺术史的角度看，这组作品有着印象派的光影处理特点，同时又融入了现代摄影的精确构图。色彩运用克制而富有表现力，空间层次处理得当，具有很强的视觉叙事性。',
+    timePosition: $r('app.string.time_position_15'),
+    reviewCnt: 89,
+    // 情绪分析数据
+    emotionData: {
+      emotion: EmotionType.RATIONAL,
+      intensity: 80,
+      emotionDistribution: createEmotionDistribution(5, 25, 10, 70, 10)
+    } as EmotionData,
+    // 高质量评论
+    qualityData: {
+      quality: CommentQualityType.HIGH,
+      tags: ['艺术评论', '深度分析'],
+      isFolded: false
+    } as QualityData
   }
 ]
