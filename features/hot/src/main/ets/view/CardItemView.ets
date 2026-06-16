@@ -25,10 +25,31 @@ export struct CardItemView {
   @State index: number = 0;
   item: FollowItemInterface = FOLLOW_LIST[0];
   name: string = '';
+  @State isLiked: boolean = false; // 是否已点赞
+  @State isFavorited: boolean = false; // 是否已收藏
+  @State likeCount: number = 0; // 点赞数
 
   aboutToAppear(): void {
     app.setImageRawDataCacheSize(1024*1024*100);
     app.setImageCacheCount(100);
+    // 初始化点赞数
+    this.likeCount = this.item.favourCount;
+  }
+
+  // 点赞处理
+  toggleLike() {
+    if (this.isLiked) {
+      this.isLiked = false;
+      this.likeCount--;
+    } else {
+      this.isLiked = true;
+      this.likeCount++;
+    }
+  }
+
+  // 收藏处理
+  toggleFavorite() {
+    this.isFavorited = !this.isFavorited;
   }
 
   build() {
@@ -131,6 +152,7 @@ export struct CardItemView {
       .width(BaseCommon.FULL_PERCENT)
 
       Row() {
+        // 分享按钮
         Row() {
           Image($r('app.media.ic_toolbar_share'))
             .height($r('app.float.follow_item_share_height'))
@@ -144,6 +166,7 @@ export struct CardItemView {
             })
         }
 
+        // 评论按钮
         Row() {
           Image($r('app.media.ic_toolbar_comment'))
             .height($r('app.float.follow_item_share_height'))
@@ -157,18 +180,33 @@ export struct CardItemView {
             })
         }
 
+        // 点赞按钮
         Row() {
           Image($r('app.media.ic_toolbar_heart'))
             .height($r('app.float.follow_item_share_height'))
             .aspectRatio(1)
 
-          Text(`${this.item.favourCount}`)
+          Text(`${this.likeCount}`)
             .fontSize($r('app.float.follow_item_share_fs'))
-            .fontColor($r('app.color.follow_item_share_fc'))
+            .fontColor(this.isLiked ? '#FF6B6B' : $r('app.color.follow_item_share_fc'))
             .margin({
               left: $r('app.float.follow_item_share_ml')
             })
         }
+        .onClick(() => {
+          this.toggleLike();
+        })
+
+        // 收藏按钮 - 星形图标
+        Row() {
+          Image($r('app.media.ic_toolbar_star'))
+            .height($r('app.float.follow_item_share_height'))
+            .aspectRatio(1)
+            .fillColor(this.isFavorited ? '#FFB84D' : Color.Black)
+        }
+        .onClick(() => {
+          this.toggleFavorite();
+        })
       }
       .width(BaseCommon.FULL_PERCENT)
       .justifyContent(FlexAlign.SpaceBetween)

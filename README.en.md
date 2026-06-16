@@ -81,6 +81,28 @@ The figure shows the effect on the Tablet:
 
 ![](screenshots/features/media-comment.png)
 
+#### 5. Like and Favorite Features
+- Comments and posts support like and favorite functionality
+- **Comment Like & Favorite**:
+  - In comment list, each comment supports like and favorite
+  - Tap heart icon to like, icon and count turn red (#FF6B6B)
+  - Tap favorite icon to save, icon turns golden yellow (#FFB84D)
+  - Like count updates in real-time, supporting increment and decrement
+- **Post Like & Favorite**:
+  - In post detail page, support liking and favoriting posts
+  - After liking, heart icon turns red, count updates in real-time
+  - After favoriting, icon turns golden, shows "Favorited" status
+  - Support unlike and unfavorite operations
+- **Card List Like & Favorite**:
+  - In follow list cards, support quick like and favorite
+  - After liking, count turns red; after favoriting, icon switches
+  - Operation states saved independently, not affecting each other
+- **Interactive Feedback**:
+  - Likes use red (#FF6B6B) highlight color
+  - Favorites use golden yellow (#FFB84D) highlight color
+  - Visual feedback on tap for enhanced user experience
+  - Smooth state transitions, support repeated operations
+
 ## Project Directory
 ```
 ├──commons/base/src/main/ets                       // Common capability layer
@@ -203,6 +225,30 @@ The GridRow and GridCol components are used to implement a community comment pag
   - Media category tags help users quickly identify content type (same-style scenery, funny memes)
   - Comment list automatically displays media content, supports multi-image grid layout
   - Click media to enlarge preview, videos support playback controls
+
+#### Like and Favorite Features
+- **Components**: 
+  - `CommentItemView.ets` (comment item)
+  - `CardItemView.ets` (card item)
+  - `MircoBlogView.ets` (post detail)
+- **State Management**:
+  - `isLiked`: Like status (boolean)
+  - `isFavorited`: Favorite status (boolean)
+  - `likeCount`: Like count (number)
+- **Icon Resources**:
+  - Like icon: `ic_toolbar_heart.svg` (heart icon)
+  - Favorite icon: `ic_state_favor.png` (favorite state icon)
+- **Implementation**:
+  - Use `@State` decorator to manage like and favorite states
+  - `toggleLike()` method handles like logic, supporting like/unlike
+  - `toggleFavorite()` method handles favorite logic, supporting favorite/unfavorite
+  - **Comment Like**: When liked, text and count turn red (#FF6B6B), heart icon remains unchanged
+  - **Post Like**: When liked, count turns red, heart icon remains unchanged
+  - **Card Like**: After liking, count turns red with obvious visual feedback
+  - **Favorite**: When favorited, icon opacity changes from 0.3 to 1 (highlight), text turns golden yellow (#FFB84D)
+  - Use `.onClick()` event listener for interactive response
+  - Use `.opacity()` to control favorite icon transparency for visual feedback
+  - States saved independently, likes and favorites don't affect each other
 
 #### Free Flow Feature
 - **Components**: `ContinueButtonView.ets` (flow button), `ContinuePanelView.ets` (flow panel)

@@ -50,6 +50,7 @@ export struct MicroBlogView {
   jumpDetail: () => void = () => {
   };
 
+
   jump(index: number) {
     AppStorage.setOrCreate('selectCardIndex', this.index);
     this.pageInfos.pushPath({ name: 'pictureDetail', param: index });
@@ -183,6 +184,7 @@ export struct MicroBlogView {
           }
         }
         // [EndExclude mirco_blog_view]
+
       }
     }
     // [StartExclude mirco_blog_view]

@@ -6,6 +6,9 @@ interface CardItemView_Params {
     index?: number;
     item?: FollowItemInterface;
     name?: string;
+    isLiked?: boolean;
+    isFavorited?: boolean;
+    likeCount?: number;
 }
 import app from "@native:system.app";
 import { BreakpointConstants as Breakpoint, CommonConstants as BaseCommon, BreakpointType } from "@normalized:N&&&base/Index&1.0.0";
@@ -22,6 +25,9 @@ export class CardItemView extends ViewPU {
         this.__index = new ObservedPropertySimplePU(0, this, "index");
         this.item = FOLLOW_LIST[0];
         this.name = '';
+        this.__isLiked = new ObservedPropertySimplePU(false, this, "isLiked");
+        this.__isFavorited = new ObservedPropertySimplePU(false, this, "isFavorited");
+        this.__likeCount = new ObservedPropertySimplePU(0, this, "likeCount");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -35,16 +41,31 @@ export class CardItemView extends ViewPU {
         if (params.name !== undefined) {
             this.name = params.name;
         }
+        if (params.isLiked !== undefined) {
+            this.isLiked = params.isLiked;
+        }
+        if (params.isFavorited !== undefined) {
+            this.isFavorited = params.isFavorited;
+        }
+        if (params.likeCount !== undefined) {
+            this.likeCount = params.likeCount;
+        }
     }
     updateStateVars(params: CardItemView_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
         this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
         this.__index.purgeDependencyOnElmtId(rmElmtId);
+        this.__isLiked.purgeDependencyOnElmtId(rmElmtId);
+        this.__isFavorited.purgeDependencyOnElmtId(rmElmtId);
+        this.__likeCount.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__currentBreakpoint.aboutToBeDeleted();
         this.__index.aboutToBeDeleted();
+        this.__isLiked.aboutToBeDeleted();
+        this.__isFavorited.aboutToBeDeleted();
+        this.__likeCount.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -64,9 +85,47 @@ export class CardItemView extends ViewPU {
     }
     private item: FollowItemInterface;
     private name: string;
+    private __isLiked: ObservedPropertySimplePU<boolean>; // 是否已点赞
+    get isLiked() {
+        return this.__isLiked.get();
+    }
+    set isLiked(newValue: boolean) {
+        this.__isLiked.set(newValue);
+    }
+    private __isFavorited: ObservedPropertySimplePU<boolean>; // 是否已收藏
+    get isFavorited() {
+        return this.__isFavorited.get();
+    }
+    set isFavorited(newValue: boolean) {
+        this.__isFavorited.set(newValue);
+    }
+    private __likeCount: ObservedPropertySimplePU<number>; // 点赞数
+    get likeCount() {
+        return this.__likeCount.get();
+    }
+    set likeCount(newValue: number) {
+        this.__likeCount.set(newValue);
+    }
     aboutToAppear(): void {
         app.setImageRawDataCacheSize(1024 * 1024 * 100);
         app.setImageCacheCount(100);
+        // 初始化点赞数
+        this.likeCount = this.item.favourCount;
+    }
+    // 点赞处理
+    toggleLike() {
+        if (this.isLiked) {
+            this.isLiked = false;
+            this.likeCount--;
+        }
+        else {
+            this.isLiked = true;
+            this.likeCount++;
+        }
+    }
+    // 收藏处理
+    toggleFavorite() {
+        this.isFavorited = !this.isFavorited;
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -214,6 +273,7 @@ export class CardItemView extends ViewPU {
             });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 分享按钮
             Row.create();
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -230,8 +290,10 @@ export class CardItemView extends ViewPU {
             });
         }, Text);
         Text.pop();
+        // 分享按钮
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 评论按钮
             Row.create();
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -248,9 +310,15 @@ export class CardItemView extends ViewPU {
             });
         }, Text);
         Text.pop();
+        // 评论按钮
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 点赞按钮
             Row.create();
+            // 点赞按钮
+            Row.onClick(() => {
+                this.toggleLike();
+            });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
@@ -258,14 +326,31 @@ export class CardItemView extends ViewPU {
             Image.aspectRatio(1);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create(`${this.item.favourCount}`);
+            Text.create(`${this.likeCount}`);
             Text.fontSize({ "id": 67109015, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Text.fontColor({ "id": 67108969, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Text.fontColor(this.isLiked ? '#FF6B6B' : { "id": 67108969, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Text.margin({
                 left: { "id": 67109017, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }
             });
         }, Text);
         Text.pop();
+        // 点赞按钮
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 收藏按钮 - 星形图标
+            Row.create();
+            // 收藏按钮 - 星形图标
+            Row.onClick(() => {
+                this.toggleFavorite();
+            });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 67109383, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Image.height({ "id": 67109016, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Image.aspectRatio(1);
+            Image.fillColor(this.isFavorited ? '#FFB84D' : Color.Black);
+        }, Image);
+        // 收藏按钮 - 星形图标
         Row.pop();
         Row.pop();
         Column.pop();

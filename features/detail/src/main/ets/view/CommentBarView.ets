@@ -28,6 +28,25 @@ export struct CommentBarView {
   isShowInput?: boolean = true;
   isDarkMode: boolean = false;
   jumpDetail: () => void = () => {};
+  @State isLiked: boolean = false; // 是否已点赞
+  @State isFavorited: boolean = false; // 是否已收藏
+  @State likeCount: number = 128; // 点赞数
+
+  // 点赞处理
+  toggleLike() {
+    if (this.isLiked) {
+      this.isLiked = false;
+      this.likeCount--;
+    } else {
+      this.isLiked = true;
+      this.likeCount++;
+    }
+  }
+
+  // 收藏处理
+  toggleFavorite() {
+    this.isFavorited = !this.isFavorited;
+  }
   // [EndExclude comment_bar_view]
 
   build() {
@@ -71,12 +90,25 @@ export struct CommentBarView {
               .onClick(() => {
                 this.jumpDetail();
               })
+            
+            // 收藏按钮 - 星形图标
             Image(this.isDarkMode ? $r('app.media.ic_toolbar_star_light') : $r('app.media.ic_toolbar_star'))
               .width($r('app.float.toolbar_comment_image_width'))
               .aspectRatio(1)
+              .fillColor(this.isFavorited ? '#FFB84D' : (this.isDarkMode ? Color.White : Color.Black))
+              .onClick(() => {
+                this.toggleFavorite();
+              })
+            
+            // 点赞按钮 - 心形图标
             Image(this.isDarkMode ? $r('app.media.ic_toolbar_heart_light') : $r('app.media.ic_toolbar_heart'))
               .width($r('app.float.toolbar_comment_image_width'))
               .aspectRatio(1)
+              .fillColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? Color.White : Color.Black))
+              .onClick(() => {
+                this.toggleLike();
+              })
+            
             Image(this.isDarkMode ? $r('app.media.ic_toolbar_share_light') : $r('app.media.ic_toolbar_share'))
               .width($r('app.float.toolbar_comment_image_width'))
               .aspectRatio(1)

@@ -37,12 +37,33 @@ export struct CommentItemView {
   // 新增状态
   @State userStance: StanceType = StanceType.NONE;
   @State isFolded: boolean = true; // 默认折叠
+  @State isLiked: boolean = false; // 是否已点赞
+  @State isFavorited: boolean = false; // 是否已收藏
+  @State likeCount: number = 0; // 点赞数
 
   aboutToAppear() {
     // 从qualityData中读取初始折叠状态
     if (this.commentItem.qualityData) {
       this.isFolded = this.commentItem.qualityData.isFolded;
     }
+    // 初始化点赞数
+    this.likeCount = this.commentItem.favorCount;
+  }
+
+  // 点赞处理
+  toggleLike() {
+    if (this.isLiked) {
+      this.isLiked = false;
+      this.likeCount--;
+    } else {
+      this.isLiked = true;
+      this.likeCount++;
+    }
+  }
+
+  // 收藏处理
+  toggleFavorite() {
+    this.isFavorited = !this.isFavorited;
   }
 
   build() {
@@ -102,16 +123,33 @@ export struct CommentItemView {
         .height($r('app.float.comment_item_title_height'))
         .justifyContent(FlexAlign.Start)
 
-        Row() {
-          Text(`${this.commentItem.favorCount}`)
-            .fontSize($r('app.float.comment_item_favor_fs'))
-            .fontWeight(FontWeight.Normal)
-            .fontColor(this.isDarkMode ? $r('app.color.font_color_dark') : $r('app.color.comment_item_favor_color'))
+        Row({ space: 8 }) {
+          // 点赞按钮 - 心形图标
+          Row({ space: 4 }) {
+            Text(`${this.likeCount}`)
+              .fontSize($r('app.float.comment_item_favor_fs'))
+              .fontWeight(FontWeight.Normal)
+              .fontColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? $r('app.color.font_color_dark') : $r('app.color.comment_item_favor_color')))
 
-          Image(this.isDarkMode ? $r('app.media.ic_comment_like') : $r('app.media.ic_public_favor'))
-            .width($r('app.float.comment_item_favor_width'))
-            .aspectRatio(1)
-            .margin({ left: $r('app.float.comment_item_favor_ml') })
+            Image($r('app.media.ic_toolbar_heart'))
+              .width($r('app.float.comment_item_favor_width'))
+              .aspectRatio(1)
+              .fillColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? Color.White : Color.Black))
+          }
+          .onClick(() => {
+            this.toggleLike();
+          })
+
+          // 收藏按钮 - 星形图标
+          Row({ space: 4 }) {
+            Image($r('app.media.ic_toolbar_star'))
+              .width($r('app.float.comment_item_favor_width'))
+              .aspectRatio(1)
+              .fillColor(this.isFavorited ? '#FFB84D' : (this.isDarkMode ? Color.White : Color.Black))
+          }
+          .onClick(() => {
+            this.toggleFavorite();
+          })
         }
       }
       .justifyContent(FlexAlign.SpaceBetween)

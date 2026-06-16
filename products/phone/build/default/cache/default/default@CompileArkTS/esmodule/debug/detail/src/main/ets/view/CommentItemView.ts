@@ -9,6 +9,9 @@ interface CommentItemView_Params {
     isDarkMode?: boolean;
     userStance?: StanceType;
     isFolded?: boolean;
+    isLiked?: boolean;
+    isFavorited?: boolean;
+    likeCount?: number;
 }
 import { CommonConstants as BaseCommon, BreakpointType, BreakpointConstants as Breakpoint, StanceType, CommentQualityType } from "@normalized:N&&&base/Index&1.0.0";
 import type { CommentItemInterface } from "@normalized:N&&&base/Index&1.0.0";
@@ -29,6 +32,9 @@ export class CommentItemView extends ViewPU {
         this.isDarkMode = false;
         this.__userStance = new ObservedPropertySimplePU(StanceType.NONE, this, "userStance");
         this.__isFolded = new ObservedPropertySimplePU(true, this, "isFolded");
+        this.__isLiked = new ObservedPropertySimplePU(false, this, "isLiked");
+        this.__isFavorited = new ObservedPropertySimplePU(false, this, "isFavorited");
+        this.__likeCount = new ObservedPropertySimplePU(0, this, "likeCount");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -48,6 +54,15 @@ export class CommentItemView extends ViewPU {
         if (params.isFolded !== undefined) {
             this.isFolded = params.isFolded;
         }
+        if (params.isLiked !== undefined) {
+            this.isLiked = params.isLiked;
+        }
+        if (params.isFavorited !== undefined) {
+            this.isFavorited = params.isFavorited;
+        }
+        if (params.likeCount !== undefined) {
+            this.likeCount = params.likeCount;
+        }
     }
     updateStateVars(params: CommentItemView_Params) {
     }
@@ -56,12 +71,18 @@ export class CommentItemView extends ViewPU {
         this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
         this.__userStance.purgeDependencyOnElmtId(rmElmtId);
         this.__isFolded.purgeDependencyOnElmtId(rmElmtId);
+        this.__isLiked.purgeDependencyOnElmtId(rmElmtId);
+        this.__isFavorited.purgeDependencyOnElmtId(rmElmtId);
+        this.__likeCount.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__isFoldHorizontal.aboutToBeDeleted();
         this.__currentBreakpoint.aboutToBeDeleted();
         this.__userStance.aboutToBeDeleted();
         this.__isFolded.aboutToBeDeleted();
+        this.__isLiked.aboutToBeDeleted();
+        this.__isFavorited.aboutToBeDeleted();
+        this.__likeCount.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -97,11 +118,49 @@ export class CommentItemView extends ViewPU {
     set isFolded(newValue: boolean) {
         this.__isFolded.set(newValue);
     }
+    private __isLiked: ObservedPropertySimplePU<boolean>; // 是否已点赞
+    get isLiked() {
+        return this.__isLiked.get();
+    }
+    set isLiked(newValue: boolean) {
+        this.__isLiked.set(newValue);
+    }
+    private __isFavorited: ObservedPropertySimplePU<boolean>; // 是否已收藏
+    get isFavorited() {
+        return this.__isFavorited.get();
+    }
+    set isFavorited(newValue: boolean) {
+        this.__isFavorited.set(newValue);
+    }
+    private __likeCount: ObservedPropertySimplePU<number>; // 点赞数
+    get likeCount() {
+        return this.__likeCount.get();
+    }
+    set likeCount(newValue: number) {
+        this.__likeCount.set(newValue);
+    }
     aboutToAppear() {
         // 从qualityData中读取初始折叠状态
         if (this.commentItem.qualityData) {
             this.isFolded = this.commentItem.qualityData.isFolded;
         }
+        // 初始化点赞数
+        this.likeCount = this.commentItem.favorCount;
+    }
+    // 点赞处理
+    toggleLike() {
+        if (this.isLiked) {
+            this.isLiked = false;
+            this.likeCount--;
+        }
+        else {
+            this.isLiked = true;
+            this.likeCount++;
+        }
+    }
+    // 收藏处理
+    toggleFavorite() {
+        this.isFavorited = !this.isFavorited;
     }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -126,7 +185,7 @@ export class CommentItemView extends ViewPU {
                                     content: () => {
                                         this.CommentContent();
                                     }
-                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 52, col: 9 });
+                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 73, col: 9 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {
@@ -222,21 +281,47 @@ export class CommentItemView extends ViewPU {
         If.pop();
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
+            Row.create({ space: 8 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Text.create(`${this.commentItem.favorCount}`);
+            // 点赞按钮 - 心形图标
+            Row.create({ space: 4 });
+            // 点赞按钮 - 心形图标
+            Row.onClick(() => {
+                this.toggleLike();
+            });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Text.create(`${this.likeCount}`);
             Text.fontSize({ "id": 67109317, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Text.fontWeight(FontWeight.Normal);
-            Text.fontColor(this.isDarkMode ? { "id": 67109273, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109270, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Text.fontColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? { "id": 67109273, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109270, "type": 10001, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }));
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create(this.isDarkMode ? { "id": 67109372, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109376, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Image.create({ "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Image.width({ "id": 67109319, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Image.aspectRatio(1);
-            Image.margin({ left: { "id": 67109318, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } });
+            Image.fillColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? Color.White : Color.Black));
         }, Image);
+        // 点赞按钮 - 心形图标
+        Row.pop();
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            // 收藏按钮 - 星形图标
+            Row.create({ space: 4 });
+            // 收藏按钮 - 星形图标
+            Row.onClick(() => {
+                this.toggleFavorite();
+            });
+        }, Row);
+        this.observeComponentCreation2((elmtId, isInitialRender) => {
+            Image.create({ "id": 67109383, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Image.width({ "id": 67109319, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+            Image.aspectRatio(1);
+            Image.fillColor(this.isFavorited ? '#FFB84D' : (this.isDarkMode ? Color.White : Color.Black));
+        }, Image);
+        // 收藏按钮 - 星形图标
+        Row.pop();
         Row.pop();
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -249,7 +334,7 @@ export class CommentItemView extends ViewPU {
                             if (isInitialRender) {
                                 let componentCall = new CommentQualityView(this, {
                                     qualityData: this.commentItem.qualityData
-                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 122, col: 9 });
+                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 160, col: 9 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {
@@ -298,7 +383,7 @@ export class CommentItemView extends ViewPU {
                                 let componentCall = new MediaGalleryView(this, {
                                     mediaList: this.commentItem.mediaList,
                                     isDarkMode: this.isDarkMode
-                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 137, col: 11 });
+                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 175, col: 11 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {
@@ -333,7 +418,7 @@ export class CommentItemView extends ViewPU {
                             if (isInitialRender) {
                                 let componentCall = new EmotionHeatmapView(this, {
                                     emotionData: this.commentItem.emotionData
-                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 148, col: 9 });
+                                }, undefined, elmtId, () => { }, { page: "features/detail/src/main/ets/view/CommentItemView.ets", line: 186, col: 9 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {

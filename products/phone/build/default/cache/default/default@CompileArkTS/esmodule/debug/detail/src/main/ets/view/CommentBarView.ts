@@ -8,6 +8,9 @@ interface CommentBarView_Params {
     isShowInput?: boolean;
     isDarkMode?: boolean;
     jumpDetail?: () => void;
+    isLiked?: boolean;
+    isFavorited?: boolean;
+    likeCount?: number;
 }
 import { CommonConstants as BaseCommon, BreakpointConstants as Breakpoint } from "@normalized:N&&&base/Index&1.0.0";
 import { CommonConstants as Common } from "@normalized:N&&&detail/src/main/ets/constants/CommonConstants&1.0.0";
@@ -24,6 +27,9 @@ export class CommentBarView extends ViewPU {
         this.isShowInput = true;
         this.isDarkMode = false;
         this.jumpDetail = () => { };
+        this.__isLiked = new ObservedPropertySimplePU(false, this, "isLiked");
+        this.__isFavorited = new ObservedPropertySimplePU(false, this, "isFavorited");
+        this.__likeCount = new ObservedPropertySimplePU(128, this, "likeCount");
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
     }
@@ -43,6 +49,15 @@ export class CommentBarView extends ViewPU {
         if (params.jumpDetail !== undefined) {
             this.jumpDetail = params.jumpDetail;
         }
+        if (params.isLiked !== undefined) {
+            this.isLiked = params.isLiked;
+        }
+        if (params.isFavorited !== undefined) {
+            this.isFavorited = params.isFavorited;
+        }
+        if (params.likeCount !== undefined) {
+            this.likeCount = params.likeCount;
+        }
     }
     updateStateVars(params: CommentBarView_Params) {
     }
@@ -50,11 +65,17 @@ export class CommentBarView extends ViewPU {
         this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
         this.__isMouseClick.purgeDependencyOnElmtId(rmElmtId);
         this.__content.purgeDependencyOnElmtId(rmElmtId);
+        this.__isLiked.purgeDependencyOnElmtId(rmElmtId);
+        this.__isFavorited.purgeDependencyOnElmtId(rmElmtId);
+        this.__likeCount.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__currentBreakpoint.aboutToBeDeleted();
         this.__isMouseClick.aboutToBeDeleted();
         this.__content.aboutToBeDeleted();
+        this.__isLiked.aboutToBeDeleted();
+        this.__isFavorited.aboutToBeDeleted();
+        this.__likeCount.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -83,6 +104,42 @@ export class CommentBarView extends ViewPU {
     private isShowInput?: boolean;
     private isDarkMode: boolean;
     private jumpDetail: () => void;
+    private __isLiked: ObservedPropertySimplePU<boolean>; // 是否已点赞
+    get isLiked() {
+        return this.__isLiked.get();
+    }
+    set isLiked(newValue: boolean) {
+        this.__isLiked.set(newValue);
+    }
+    private __isFavorited: ObservedPropertySimplePU<boolean>; // 是否已收藏
+    get isFavorited() {
+        return this.__isFavorited.get();
+    }
+    set isFavorited(newValue: boolean) {
+        this.__isFavorited.set(newValue);
+    }
+    private __likeCount: ObservedPropertySimplePU<number>; // 点赞数
+    get likeCount() {
+        return this.__likeCount.get();
+    }
+    set likeCount(newValue: number) {
+        this.__likeCount.set(newValue);
+    }
+    // 点赞处理
+    toggleLike() {
+        if (this.isLiked) {
+            this.isLiked = false;
+            this.likeCount--;
+        }
+        else {
+            this.isLiked = true;
+            this.likeCount++;
+        }
+    }
+    // 收藏处理
+    toggleFavorite() {
+        this.isFavorited = !this.isFavorited;
+    }
     // [EndExclude comment_bar_view]
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -148,14 +205,32 @@ export class CommentBarView extends ViewPU {
                         });
                     }, Image);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        // 收藏按钮 - 星形图标
                         Image.create(this.isDarkMode ? { "id": 67109384, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109383, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                        // 收藏按钮 - 星形图标
                         Image.width({ "id": 67109367, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                        // 收藏按钮 - 星形图标
                         Image.aspectRatio(1);
+                        // 收藏按钮 - 星形图标
+                        Image.fillColor(this.isFavorited ? '#FFB84D' : (this.isDarkMode ? Color.White : Color.Black));
+                        // 收藏按钮 - 星形图标
+                        Image.onClick(() => {
+                            this.toggleFavorite();
+                        });
                     }, Image);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        // 点赞按钮 - 心形图标
                         Image.create(this.isDarkMode ? { "id": 67109379, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                        // 点赞按钮 - 心形图标
                         Image.width({ "id": 67109367, "type": 10002, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                        // 点赞按钮 - 心形图标
                         Image.aspectRatio(1);
+                        // 点赞按钮 - 心形图标
+                        Image.fillColor(this.isLiked ? '#FF6B6B' : (this.isDarkMode ? Color.White : Color.Black));
+                        // 点赞按钮 - 心形图标
+                        Image.onClick(() => {
+                            this.toggleLike();
+                        });
                     }, Image);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Image.create(this.isDarkMode ? { "id": 67109382, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" } : { "id": 67109251, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
