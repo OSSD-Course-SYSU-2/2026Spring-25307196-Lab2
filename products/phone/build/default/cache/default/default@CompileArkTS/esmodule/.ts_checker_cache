@@ -161,7 +161,10 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\folder_stack.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\nav_destination.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\navigation.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MessagePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MinePage.ets"
       ],
       "error": false
     },
@@ -1762,7 +1765,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets": {
-      "mtimeMs": 1782207406841.008,
+      "mtimeMs": 1782217319677.9746,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
         "F:\\MultiCommunityApplication\\features\\hot\\Index.ets",
@@ -2877,7 +2880,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets": {
-      "mtimeMs": 1782210397287.8628,
+      "mtimeMs": 1782217985370.4417,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
@@ -2888,7 +2891,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MessagePage.ets": {
-      "mtimeMs": 1782207406832.7046,
+      "mtimeMs": 1782217988267.4956,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
       ],
@@ -2898,7 +2901,7 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MinePage.ets": {
-      "mtimeMs": 1782210581941.344,
+      "mtimeMs": 1782218011181.269,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
       ],

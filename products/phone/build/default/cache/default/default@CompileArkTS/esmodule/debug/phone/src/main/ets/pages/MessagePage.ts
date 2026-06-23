@@ -39,6 +39,7 @@ export class MessagePage extends ViewPU {
             Column.create();
             Column.width('100%');
             Column.height('100%');
+            Column.padding({ top: 8 });
             Column.backgroundColor('#F5F5F5');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -47,7 +48,7 @@ export class MessagePage extends ViewPU {
             // 顶部标题栏
             Row.width('100%');
             // 顶部标题栏
-            Row.height(56);
+            Row.height(48);
             // 顶部标题栏
             Row.padding({ left: 16, right: 16 });
             // 顶部标题栏
@@ -55,14 +56,14 @@ export class MessagePage extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('消息');
-            Text.fontSize(20);
+            Text.fontSize(18);
             Text.fontWeight(FontWeight.Bold);
             Text.layoutWeight(1);
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109377, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(24);
+            Image.width(20);
             Image.aspectRatio(1);
         }, Image);
         // 顶部标题栏
@@ -75,11 +76,11 @@ export class MessagePage extends ViewPU {
             // 消息分类
             Row.justifyContent(FlexAlign.SpaceAround);
             // 消息分类
-            Row.padding({ top: 16, bottom: 16 });
+            Row.padding({ top: 12, bottom: 12 });
             // 消息分类
             Row.backgroundColor(Color.White);
             // 消息分类
-            Row.margin({ top: 8 });
+            Row.margin({ top: 4 });
         }, Row);
         this.MessageCategory.bind(this)('互动', '128', { "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
         this.MessageCategory.bind(this)('通知', '36', { "id": 67109377, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
@@ -134,17 +135,17 @@ export class MessagePage extends ViewPU {
     MessageCategory(title: string, count: string, icon: Resource, parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.width(60);
+            Column.width(56);
             Column.justifyContent(FlexAlign.Center);
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Stack.create({ alignContent: Alignment.TopEnd });
-            Stack.width(48);
-            Stack.height(48);
+            Stack.width(40);
+            Stack.height(40);
         }, Stack);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create(icon);
-            Image.width(48);
+            Image.width(40);
             Image.aspectRatio(1);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -172,7 +173,7 @@ export class MessagePage extends ViewPU {
         Stack.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.margin({ top: 4 });
             Text.fontColor('#333333');
         }, Text);
@@ -183,22 +184,22 @@ export class MessagePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
             Row.width('100%');
-            Row.padding(12);
+            Row.padding(10);
             Row.backgroundColor(Color.White);
             Row.borderRadius(8);
-            Row.margin({ bottom: 8 });
+            Row.margin({ bottom: 6 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109221, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(48);
+            Image.width(44);
             Image.aspectRatio(1);
-            Image.borderRadius(24);
+            Image.borderRadius(22);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
             Column.layoutWeight(1);
             Column.alignItems(HorizontalAlign.Start);
-            Column.margin({ left: 12 });
+            Column.margin({ left: 10 });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
@@ -206,21 +207,21 @@ export class MessagePage extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('用户昵称');
-            Text.fontSize(16);
+            Text.fontSize(15);
             Text.fontWeight(FontWeight.Bold);
             Text.layoutWeight(1);
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('10:30');
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.fontColor('#999999');
         }, Text);
         Text.pop();
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('赞了你的评论：这个照片拍得真不错！');
-            Text.fontSize(14);
+            Text.fontSize(13);
             Text.fontColor('#666666');
             Text.margin({ top: 4 });
             Text.maxLines(1);

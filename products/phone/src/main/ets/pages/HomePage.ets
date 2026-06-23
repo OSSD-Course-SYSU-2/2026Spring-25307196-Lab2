@@ -46,36 +46,36 @@ export struct HomePage {
         // 顶部搜索栏
         Row() {
           Image($r('app.media.ic_icon_1'))
-            .width(40)
+            .width(36)
             .aspectRatio(1)
-            .borderRadius(20)
+            .borderRadius(18)
             .margin({ left: 16 })
 
           Row() {
             Image($r('app.media.ic_toolbar_comment'))
-              .width(16)
+              .width(14)
               .aspectRatio(1)
               .opacity(0.5)
 
             Text('搜索感兴趣的内容')
-              .fontSize(14)
+              .fontSize(13)
               .fontColor('#999999')
               .margin({ left: 8 })
           }
           .layoutWeight(1)
-          .height(36)
+          .height(32)
           .backgroundColor('#F5F5F5')
-          .borderRadius(18)
+          .borderRadius(16)
           .padding({ left: 12, right: 12 })
           .margin({ left: 12, right: 12 })
 
           Image($r('app.media.ic_toolbar_share'))
-            .width(24)
+            .width(20)
             .aspectRatio(1)
             .margin({ right: 16 })
         }
         .width('100%')
-        .height(56)
+        .height(48)
         .backgroundColor(Color.White)
 
         // 轮播图
@@ -83,7 +83,7 @@ export struct HomePage {
           ForEach(this.bannerImages, (image: Resource, index: number) => {
             Image(image)
               .width('100%')
-              .height(180)
+              .height(140)
               .objectFit(ImageFit.Cover)
               .borderRadius(8)
           })
@@ -93,8 +93,8 @@ export struct HomePage {
         .indicator(true)
         .loop(true)
         .width('100%')
-        .height(180)
-        .margin({ top: 8, left: 16, right: 16 })
+        .height(140)
+        .margin({ top: 4, left: 16, right: 16 })
 
         // 快捷入口
         Row() {
@@ -105,9 +105,9 @@ export struct HomePage {
         }
         .width('100%')
         .justifyContent(FlexAlign.SpaceAround)
-        .padding({ top: 16, bottom: 16 })
+        .padding({ top: 12, bottom: 12 })
         .backgroundColor(Color.White)
-        .margin({ top: 8 })
+        .margin({ top: 4 })
 
         // 推荐内容列表
         Column() {
@@ -134,6 +134,7 @@ export struct HomePage {
       }
       .width('100%')
       .height('100%')
+      .padding({ top: 8 })
       .backgroundColor('#F5F5F5')
 
       // 发帖按钮
@@ -336,15 +337,15 @@ export struct HomePage {
   ShortcutItem(title: string, icon: Resource) {
     Column() {
       Image(icon)
-        .width(40)
+        .width(32)
         .aspectRatio(1)
 
       Text(title)
-        .fontSize(12)
+        .fontSize(11)
         .margin({ top: 4 })
         .fontColor('#333333')
     }
-    .width(60)
+    .width(52)
     .justifyContent(FlexAlign.Center)
   }
 
@@ -353,17 +354,17 @@ export struct HomePage {
     Column() {
       Row() {
         Image($r('app.media.ic_icon_1'))
-          .width(36)
+          .width(32)
           .aspectRatio(1)
-          .borderRadius(18)
+          .borderRadius(16)
 
         Column() {
           Text('用户名称')
-            .fontSize(14)
+            .fontSize(13)
             .fontWeight(FontWeight.Bold)
 
           Text('2小时前')
-            .fontSize(12)
+            .fontSize(11)
             .fontColor('#999999')
         }
         .alignItems(HorizontalAlign.Start)
@@ -373,35 +374,35 @@ export struct HomePage {
       .width('100%')
 
       Text('这是一条推荐内容的描述文字，展示在首页的推荐列表中。')
-        .fontSize(14)
-        .margin({ top: 8 })
+        .fontSize(13)
+        .margin({ top: 6 })
         .maxLines(2)
         .textOverflow({ overflow: TextOverflow.Ellipsis })
 
       Image($r('app.media.ic_social_circle1'))
         .width('100%')
-        .height(120)
+        .height(100)
         .objectFit(ImageFit.Cover)
         .borderRadius(8)
-        .margin({ top: 8 })
+        .margin({ top: 6 })
 
       Row() {
         Text('👍 128')
-          .fontSize(12)
+          .fontSize(11)
           .fontColor('#666666')
 
         Text('💬 36')
-          .fontSize(12)
+          .fontSize(11)
           .fontColor('#666666')
-          .margin({ left: 16 })
+          .margin({ left: 12 })
       }
       .width('100%')
-      .margin({ top: 8 })
+      .margin({ top: 6 })
     }
     .width('100%')
-    .padding(12)
+    .padding(10)
     .backgroundColor(Color.White)
     .borderRadius(8)
-    .margin({ bottom: 8 })
+    .margin({ bottom: 6 })
   }
 }

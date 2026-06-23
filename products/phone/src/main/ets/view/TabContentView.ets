@@ -40,6 +40,7 @@ export struct TabContentView {
         .fontWeight(Common.FONT_WEIGHT_500)
         .fontColor(index === this.currentIndex ? $r('app.color.tab_select_color') : $r('app.color.tab_normal_color'))
     }
+    .width(Common.FULL_PERCENT)
     .height(Common.FULL_PERCENT)
     .justifyContent(FlexAlign.Center)
   }

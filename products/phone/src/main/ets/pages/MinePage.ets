@@ -58,32 +58,32 @@ export struct MinePage {
         Column() {
           Row() {
             Image($r('app.media.ic_icon_1'))
-              .width(64)
+              .width(56)
               .aspectRatio(1)
-              .borderRadius(32)
+              .borderRadius(28)
 
             Column() {
               Text('用户昵称')
-                .fontSize(20)
+                .fontSize(18)
                 .fontWeight(FontWeight.Bold)
                 .fontColor(Color.White)
 
               Text('ID: 123456')
-                .fontSize(12)
+                .fontSize(11)
                 .fontColor(Color.White)
                 .opacity(0.8)
-                .margin({ top: 4 })
+                .margin({ top: 2 })
             }
             .alignItems(HorizontalAlign.Start)
-            .margin({ left: 16 })
+            .margin({ left: 12 })
             .layoutWeight(1)
 
             Image($r('app.media.ic_toolbar_share'))
-              .width(24)
+              .width(20)
               .aspectRatio(1)
           }
           .width('100%')
-          .padding(16)
+          .padding({ left: 16, right: 16, top: 12, bottom: 8 })
 
           // 数据统计
           Row() {
@@ -94,7 +94,7 @@ export struct MinePage {
           }
           .width('100%')
           .justifyContent(FlexAlign.SpaceAround)
-          .padding({ top: 16, bottom: 16 })
+          .padding({ top: 8, bottom: 8 })
         }
         .width('100%')
         .linearGradient({
@@ -114,6 +114,7 @@ export struct MinePage {
       }
       .width('100%')
       .height('100%')
+      .padding({ top: 8 })
       .backgroundColor('#F5F5F5')
     }
   }
@@ -122,15 +123,15 @@ export struct MinePage {
   StatItem(title: string, count: string) {
     Column() {
       Text(count)
-        .fontSize(18)
+        .fontSize(16)
         .fontWeight(FontWeight.Bold)
         .fontColor(Color.White)
 
       Text(title)
-        .fontSize(12)
+        .fontSize(11)
         .fontColor(Color.White)
         .opacity(0.8)
-        .margin({ top: 4 })
+        .margin({ top: 2 })
     }
     .justifyContent(FlexAlign.Center)
   }
@@ -139,9 +140,9 @@ export struct MinePage {
   MenuSection(title: string, items: MenuItem[]) {
     Column() {
       Text(title)
-        .fontSize(14)
+        .fontSize(13)
         .fontColor('#999999')
-        .margin({ top: 12, bottom: 8, left: 16 })
+        .margin({ top: 8, bottom: 6, left: 16 })
         .width('100%')
 
       Column() {
@@ -168,42 +169,32 @@ export struct MinePage {
   @Builder
   MenuItem(icon: Resource, title: string, count: string) {
     Row() {
-      Row() {
-        Image(icon)
-          .width(24)
-          .height(24)
-      }
-      .width(40)
-      .height(40)
-      .justifyContent(FlexAlign.Center)
-      .alignItems(VerticalAlign.Center)
+      Image(icon)
+        .width(22)
+        .height(22)
+        .margin({ left: 16 })
 
       Text(title)
-        .fontSize(16)
+        .fontSize(15)
+        .margin({ left: 12 })
         .layoutWeight(1)
 
       if (count !== '') {
         Text(count)
-          .fontSize(14)
+          .fontSize(13)
           .fontColor('#999999')
           .margin({ right: 8 })
       }
 
-      Row() {
-        Image($r('app.media.ic_toolbar_share'))
-          .width(16)
-          .height(16)
-          .opacity(0.3)
-          .rotate({ angle: 90 })
-      }
-      .width(24)
-      .height(24)
-      .justifyContent(FlexAlign.Center)
-      .alignItems(VerticalAlign.Center)
+      Image($r('app.media.ic_toolbar_share'))
+        .width(14)
+        .height(14)
+        .opacity(0.3)
+        .rotate({ angle: 90 })
+        .margin({ right: 16 })
     }
     .width('100%')
-    .height(56)
-    .padding({ left: 8, right: 16 })
+    .height(48)
     .alignItems(VerticalAlign.Center)
     .onClick(() => {
       if (title === '我的发布') {
@@ -273,6 +264,7 @@ export struct MinePage {
     }
     .width('100%')
     .height('100%')
+    .padding({ top: 8 })
     .backgroundColor('#F5F5F5')
   }
 

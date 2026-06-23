@@ -107,6 +107,7 @@ export class MinePage extends ViewPU {
                         Column.create();
                         Column.width('100%');
                         Column.height('100%');
+                        Column.padding({ top: 8 });
                         Column.backgroundColor('#F5F5F5');
                     }, Column);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -123,39 +124,39 @@ export class MinePage extends ViewPU {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Row.create();
                         Row.width('100%');
-                        Row.padding(16);
+                        Row.padding({ left: 16, right: 16, top: 12, bottom: 8 });
                     }, Row);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Image.create({ "id": 67109221, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-                        Image.width(64);
+                        Image.width(56);
                         Image.aspectRatio(1);
-                        Image.borderRadius(32);
+                        Image.borderRadius(28);
                     }, Image);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Column.create();
                         Column.alignItems(HorizontalAlign.Start);
-                        Column.margin({ left: 16 });
+                        Column.margin({ left: 12 });
                         Column.layoutWeight(1);
                     }, Column);
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Text.create('用户昵称');
-                        Text.fontSize(20);
+                        Text.fontSize(18);
                         Text.fontWeight(FontWeight.Bold);
                         Text.fontColor(Color.White);
                     }, Text);
                     Text.pop();
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Text.create('ID: 123456');
-                        Text.fontSize(12);
+                        Text.fontSize(11);
                         Text.fontColor(Color.White);
                         Text.opacity(0.8);
-                        Text.margin({ top: 4 });
+                        Text.margin({ top: 2 });
                     }, Text);
                     Text.pop();
                     Column.pop();
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Image.create({ "id": 67109251, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-                        Image.width(24);
+                        Image.width(20);
                         Image.aspectRatio(1);
                     }, Image);
                     Row.pop();
@@ -167,7 +168,7 @@ export class MinePage extends ViewPU {
                         // 数据统计
                         Row.justifyContent(FlexAlign.SpaceAround);
                         // 数据统计
-                        Row.padding({ top: 16, bottom: 16 });
+                        Row.padding({ top: 8, bottom: 8 });
                     }, Row);
                     this.StatItem.bind(this)('关注', '128');
                     this.StatItem.bind(this)('粉丝', '1.2万');
@@ -206,17 +207,17 @@ export class MinePage extends ViewPU {
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(count);
-            Text.fontSize(18);
+            Text.fontSize(16);
             Text.fontWeight(FontWeight.Bold);
             Text.fontColor(Color.White);
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.fontColor(Color.White);
             Text.opacity(0.8);
-            Text.margin({ top: 4 });
+            Text.margin({ top: 2 });
         }, Text);
         Text.pop();
         Column.pop();
@@ -228,9 +229,9 @@ export class MinePage extends ViewPU {
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
-            Text.fontSize(14);
+            Text.fontSize(13);
             Text.fontColor('#999999');
-            Text.margin({ top: 12, bottom: 8, left: 16 });
+            Text.margin({ top: 8, bottom: 6, left: 16 });
             Text.width('100%');
         }, Text);
         Text.pop();
@@ -279,8 +280,7 @@ export class MinePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
             Row.width('100%');
-            Row.height(56);
-            Row.padding({ left: 8, right: 16 });
+            Row.height(48);
             Row.alignItems(VerticalAlign.Center);
             Row.onClick(() => {
                 if (title === '我的发布') {
@@ -289,21 +289,15 @@ export class MinePage extends ViewPU {
             });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-            Row.width(40);
-            Row.height(40);
-            Row.justifyContent(FlexAlign.Center);
-            Row.alignItems(VerticalAlign.Center);
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create(icon);
-            Image.width(24);
-            Image.height(24);
+            Image.width(22);
+            Image.height(22);
+            Image.margin({ left: 16 });
         }, Image);
-        Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
-            Text.fontSize(16);
+            Text.fontSize(15);
+            Text.margin({ left: 12 });
             Text.layoutWeight(1);
         }, Text);
         Text.pop();
@@ -313,7 +307,7 @@ export class MinePage extends ViewPU {
                 this.ifElseBranchUpdateFunction(0, () => {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Text.create(count);
-                        Text.fontSize(14);
+                        Text.fontSize(13);
                         Text.fontColor('#999999');
                         Text.margin({ right: 8 });
                     }, Text);
@@ -327,20 +321,13 @@ export class MinePage extends ViewPU {
         }, If);
         If.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Row.create();
-            Row.width(24);
-            Row.height(24);
-            Row.justifyContent(FlexAlign.Center);
-            Row.alignItems(VerticalAlign.Center);
-        }, Row);
-        this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109251, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(16);
-            Image.height(16);
+            Image.width(14);
+            Image.height(14);
             Image.opacity(0.3);
             Image.rotate({ angle: 90 });
+            Image.margin({ right: 16 });
         }, Image);
-        Row.pop();
         Row.pop();
     }
     MyPostsPage(parent = null) {
@@ -348,6 +335,7 @@ export class MinePage extends ViewPU {
             Column.create();
             Column.width('100%');
             Column.height('100%');
+            Column.padding({ top: 8 });
             Column.backgroundColor('#F5F5F5');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {

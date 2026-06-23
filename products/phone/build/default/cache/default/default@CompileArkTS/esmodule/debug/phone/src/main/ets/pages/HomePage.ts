@@ -130,6 +130,7 @@ export class HomePage extends ViewPU {
             Column.create();
             Column.width('100%');
             Column.height('100%');
+            Column.padding({ top: 8 });
             Column.backgroundColor('#F5F5F5');
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
@@ -138,35 +139,35 @@ export class HomePage extends ViewPU {
             // 顶部搜索栏
             Row.width('100%');
             // 顶部搜索栏
-            Row.height(56);
+            Row.height(48);
             // 顶部搜索栏
             Row.backgroundColor(Color.White);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109221, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(40);
+            Image.width(36);
             Image.aspectRatio(1);
-            Image.borderRadius(20);
+            Image.borderRadius(18);
             Image.margin({ left: 16 });
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
             Row.layoutWeight(1);
-            Row.height(36);
+            Row.height(32);
             Row.backgroundColor('#F5F5F5');
-            Row.borderRadius(18);
+            Row.borderRadius(16);
             Row.padding({ left: 12, right: 12 });
             Row.margin({ left: 12, right: 12 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109377, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(16);
+            Image.width(14);
             Image.aspectRatio(1);
             Image.opacity(0.5);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('搜索感兴趣的内容');
-            Text.fontSize(14);
+            Text.fontSize(13);
             Text.fontColor('#999999');
             Text.margin({ left: 8 });
         }, Text);
@@ -174,7 +175,7 @@ export class HomePage extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109251, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(24);
+            Image.width(20);
             Image.aspectRatio(1);
             Image.margin({ right: 16 });
         }, Image);
@@ -194,9 +195,9 @@ export class HomePage extends ViewPU {
             // 轮播图
             Swiper.width('100%');
             // 轮播图
-            Swiper.height(180);
+            Swiper.height(140);
             // 轮播图
-            Swiper.margin({ top: 8, left: 16, right: 16 });
+            Swiper.margin({ top: 4, left: 16, right: 16 });
         }, Swiper);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             ForEach.create();
@@ -205,7 +206,7 @@ export class HomePage extends ViewPU {
                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                     Image.create(image);
                     Image.width('100%');
-                    Image.height(180);
+                    Image.height(140);
                     Image.objectFit(ImageFit.Cover);
                     Image.borderRadius(8);
                 }, Image);
@@ -223,11 +224,11 @@ export class HomePage extends ViewPU {
             // 快捷入口
             Row.justifyContent(FlexAlign.SpaceAround);
             // 快捷入口
-            Row.padding({ top: 16, bottom: 16 });
+            Row.padding({ top: 12, bottom: 12 });
             // 快捷入口
             Row.backgroundColor(Color.White);
             // 快捷入口
-            Row.margin({ top: 8 });
+            Row.margin({ top: 4 });
         }, Row);
         this.ShortcutItem.bind(this)('推荐', { "id": 67109245, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
         this.ShortcutItem.bind(this)('关注', { "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
@@ -584,17 +585,17 @@ export class HomePage extends ViewPU {
     ShortcutItem(title: string, icon: Resource, parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
-            Column.width(60);
+            Column.width(52);
             Column.justifyContent(FlexAlign.Center);
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create(icon);
-            Image.width(40);
+            Image.width(32);
             Image.aspectRatio(1);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.margin({ top: 4 });
             Text.fontColor('#333333');
         }, Text);
@@ -605,10 +606,10 @@ export class HomePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
             Column.width('100%');
-            Column.padding(12);
+            Column.padding(10);
             Column.backgroundColor(Color.White);
             Column.borderRadius(8);
-            Column.margin({ bottom: 8 });
+            Column.margin({ bottom: 6 });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
@@ -616,9 +617,9 @@ export class HomePage extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109221, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
-            Image.width(36);
+            Image.width(32);
             Image.aspectRatio(1);
-            Image.borderRadius(18);
+            Image.borderRadius(16);
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
@@ -628,13 +629,13 @@ export class HomePage extends ViewPU {
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('用户名称');
-            Text.fontSize(14);
+            Text.fontSize(13);
             Text.fontWeight(FontWeight.Bold);
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('2小时前');
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.fontColor('#999999');
         }, Text);
         Text.pop();
@@ -642,8 +643,8 @@ export class HomePage extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('这是一条推荐内容的描述文字，展示在首页的推荐列表中。');
-            Text.fontSize(14);
-            Text.margin({ top: 8 });
+            Text.fontSize(13);
+            Text.margin({ top: 6 });
             Text.maxLines(2);
             Text.textOverflow({ overflow: TextOverflow.Ellipsis });
         }, Text);
@@ -651,27 +652,27 @@ export class HomePage extends ViewPU {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Image.create({ "id": 67109235, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
             Image.width('100%');
-            Image.height(120);
+            Image.height(100);
             Image.objectFit(ImageFit.Cover);
             Image.borderRadius(8);
-            Image.margin({ top: 8 });
+            Image.margin({ top: 6 });
         }, Image);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
             Row.width('100%');
-            Row.margin({ top: 8 });
+            Row.margin({ top: 6 });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('👍 128');
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.fontColor('#666666');
         }, Text);
         Text.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create('💬 36');
-            Text.fontSize(12);
+            Text.fontSize(11);
             Text.fontColor('#666666');
-            Text.margin({ left: 16 });
+            Text.margin({ left: 12 });
         }, Text);
         Text.pop();
         Row.pop();

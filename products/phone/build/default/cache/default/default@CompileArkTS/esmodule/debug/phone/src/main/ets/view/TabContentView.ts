@@ -78,6 +78,7 @@ export class TabContentView extends ViewPU {
     TabBarBuilder(item: BarItemInterface, index: number, parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
+            Column.width(Common.FULL_PERCENT);
             Column.height(Common.FULL_PERCENT);
             Column.justifyContent(FlexAlign.Center);
         }, Column);
@@ -142,7 +143,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new HomePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 68, col: 13 });
+                            let componentCall = new HomePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 69, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -165,7 +166,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 73, col: 13 });
+                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 74, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -188,7 +189,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new MessagePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 78, col: 13 });
+                            let componentCall = new MessagePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 79, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -211,7 +212,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new MinePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 83, col: 13 });
+                            let componentCall = new MinePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 84, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -236,7 +237,7 @@ export class TabContentView extends ViewPU {
                 if (isInitialRender) {
                     let componentCall = new 
                     // 流转悬浮按钮
-                    ContinueButtonView(this, { showContinuePanel: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 103, col: 7 });
+                    ContinueButtonView(this, { showContinuePanel: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 104, col: 7 });
                     ViewPU.create(componentCall);
                     let paramsLambda = () => {
                         return {
@@ -275,7 +276,7 @@ export class TabContentView extends ViewPU {
                     {
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
                             if (isInitialRender) {
-                                let componentCall = new ContinuePanelView(this, { isVisible: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 110, col: 11 });
+                                let componentCall = new ContinuePanelView(this, { isVisible: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 111, col: 11 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {

@@ -24,16 +24,16 @@ export struct MessagePage {
       // 顶部标题栏
       Row() {
         Text('消息')
-          .fontSize(20)
+          .fontSize(18)
           .fontWeight(FontWeight.Bold)
           .layoutWeight(1)
 
         Image($r('app.media.ic_toolbar_comment'))
-          .width(24)
+          .width(20)
           .aspectRatio(1)
       }
       .width('100%')
-      .height(56)
+      .height(48)
       .padding({ left: 16, right: 16 })
       .backgroundColor(Color.White)
 
@@ -46,9 +46,9 @@ export struct MessagePage {
       }
       .width('100%')
       .justifyContent(FlexAlign.SpaceAround)
-      .padding({ top: 16, bottom: 16 })
+      .padding({ top: 12, bottom: 12 })
       .backgroundColor(Color.White)
-      .margin({ top: 8 })
+      .margin({ top: 4 })
 
       // 消息列表
       List() {
@@ -65,6 +65,7 @@ export struct MessagePage {
     }
     .width('100%')
     .height('100%')
+    .padding({ top: 8 })
     .backgroundColor('#F5F5F5')
   }
 
@@ -73,7 +74,7 @@ export struct MessagePage {
     Column() {
       Stack({ alignContent: Alignment.TopEnd }) {
         Image(icon)
-          .width(48)
+          .width(40)
           .aspectRatio(1)
 
         if (count !== '0') {
@@ -86,15 +87,15 @@ export struct MessagePage {
             .margin({ top: -4, right: -4 })
         }
       }
-      .width(48)
-      .height(48)
+      .width(40)
+      .height(40)
 
       Text(title)
-        .fontSize(12)
+        .fontSize(11)
         .margin({ top: 4 })
         .fontColor('#333333')
     }
-    .width(60)
+    .width(56)
     .justifyContent(FlexAlign.Center)
   }
 
@@ -102,25 +103,25 @@ export struct MessagePage {
   MessageItem() {
     Row() {
       Image($r('app.media.ic_icon_1'))
-        .width(48)
+        .width(44)
         .aspectRatio(1)
-        .borderRadius(24)
+        .borderRadius(22)
 
       Column() {
         Row() {
           Text('用户昵称')
-            .fontSize(16)
+            .fontSize(15)
             .fontWeight(FontWeight.Bold)
             .layoutWeight(1)
 
           Text('10:30')
-            .fontSize(12)
+            .fontSize(11)
             .fontColor('#999999')
         }
         .width('100%')
 
         Text('赞了你的评论：这个照片拍得真不错！')
-          .fontSize(14)
+          .fontSize(13)
           .fontColor('#666666')
           .margin({ top: 4 })
           .maxLines(1)
@@ -128,12 +129,12 @@ export struct MessagePage {
       }
       .layoutWeight(1)
       .alignItems(HorizontalAlign.Start)
-      .margin({ left: 12 })
+      .margin({ left: 10 })
     }
     .width('100%')
-    .padding(12)
+    .padding(10)
     .backgroundColor(Color.White)
     .borderRadius(8)
-    .margin({ bottom: 8 })
+    .margin({ bottom: 6 })
   }
 }
