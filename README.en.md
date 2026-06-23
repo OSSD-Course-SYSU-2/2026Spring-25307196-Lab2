@@ -81,7 +81,33 @@ The figure shows the effect on the Tablet:
 
 ![](screenshots/features/media-comment.png)
 
-#### 5. Like and Favorite Features
+#### 5. AI Comment Polish Feature
+- Intelligent comment polishing and optimization system to enhance comment quality
+- **Polish Styles**:
+  - Literary: Poetic and elegant, picturesque
+  - Sarcastic: Humorous and witty, amusing
+  - Professional: Rational and in-depth, insightful
+  - Casual: Lively and friendly, natural
+  - Emotional: Sentimental resonance, touching
+- **Key Features**:
+  - AI-powered polishing while preserving original sentiment
+  - Quality analysis to identify low-quality comments
+  - Optimization suggestions to improve readability
+  - Keyword extraction and sentiment analysis
+  - Polish history with undo support
+- **User Experience**:
+  - Real-time preview of polished results
+  - One-tap apply polished text
+  - Multi-style comparison
+  - Confidence score display
+
+**Preview:**
+
+![](screenshots/functions/ai-polish1.png)
+![](screenshots/functions/ai-polish2.png)
+
+
+#### 6. Like and Favorite Features
 - Comments and posts support like and favorite functionality
 - **Comment Like & Favorite**:
   - In comment list, each comment supports like and favorite
@@ -225,6 +251,28 @@ The GridRow and GridCol components are used to implement a community comment pag
   - Media category tags help users quickly identify content type (same-style scenery, funny memes)
   - Comment list automatically displays media content, supports multi-image grid layout
   - Click media to enlarge preview, videos support playback controls
+
+#### AI Comment Polish Feature
+- **Components**: 
+  - `AIPolishPanelView.ets` (polish panel)
+  - `AIPolishResultView.ets` (polish result)
+  - `AIPolishStyleView.ets` (style selection)
+  - `AIQualityAnalysisView.ets` (quality analysis)
+  - `CommentInputWithAIView.ets` (AI comment input bar)
+- **Service**: `AIPolishService.ets` (AI polish service)
+- **Data Structures**: 
+  - `PolishStyle` enum (literary, sarcastic, professional, casual, emotional)
+  - `PolishResult` interface (polish result)
+  - `QualityAnalysisResult` interface (quality analysis result)
+  - `PolishStyleConfig` interface (style configuration)
+- **Implementation**:
+  - Integrate AI polish button in comment input box, click to expand polish panel
+  - Support 5 polish styles switching, each with unique theme color and example
+  - AI-powered polishing preserves original sentiment, provides confidence score
+  - Quality analysis identifies low-quality comments, offers optimization suggestions
+  - Keyword extraction and sentiment analysis enhance comment readability
+  - Polish history supports undo and re-apply
+  - Real-time preview of polish effect, one-tap apply to input box
 
 #### Like and Favorite Features
 - **Components**: 
