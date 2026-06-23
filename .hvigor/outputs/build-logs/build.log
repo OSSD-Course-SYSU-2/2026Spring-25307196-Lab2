@@ -3020,3 +3020,792 @@ Require stack:
 [2026-06-16T20:48:00.776] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
 [2026-06-16T20:48:00.777] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
 [2026-06-16T20:48:00.838] [DEBUG] debug-file - worker[10] exits with exit code 1.
+[2026-06-23T16:51:02.695] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED 127.0.0.1:45050
+[2026-06-23T16:51:02.959] [DEBUG] debug-file - java daemon started at port 45050 pid 16860
+[2026-06-23T16:50:52.398] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-06-23T16:50:53.006] [DEBUG] debug-file - env: daemon=true
+[2026-06-23T16:50:52.405] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '6.0.0', dependencies: {} }
+[2026-06-23T16:51:06.394] [DEBUG] debug-file - session manager: set active socket. socketId=UGeYw0QXSWDZXQGrAAAB
+[2026-06-23T16:51:06.471] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-06-23T16:51:06.486] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-06-23T16:51:06.489] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-06-23T16:51:06.492] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-06-23T16:51:06.503] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-06-23T16:51:06.517] [DEBUG] debug-file - Workers' log level updated to INFO
+[2026-06-23T16:51:06.585] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-06-23T16:51:06.728] [DEBUG] debug-file - Cache service initialization finished in 141 ms 
+[2026-06-23T16:51:06.738] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\hvigorfile.ts
+[2026-06-23T16:52:25.953] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:25.954] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:25.958] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:25.959] [DEBUG] debug-file - App plugin prepare start...
+[2026-06-23T16:52:25.960] [DEBUG] debug-file - App plugin prepare end...
+[2026-06-23T16:52:25.961] [DEBUG] debug-file - App plugin creating...
+[2026-06-23T16:52:27.346] [DEBUG] debug-file - App plugin register hook start...
+[2026-06-23T16:52:27.349] [DEBUG] debug-file - App plugin register hook end...
+[2026-06-23T16:52:27.350] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:27.358] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2026-06-23T16:52:27.360] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2026-06-23T16:52:27.363] [DEBUG] debug-file - Product 'default' build option initialized
+[2026-06-23T16:52:27.363] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2026-06-23T16:52:27.375] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2026-06-23T16:52:27.537] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2026-06-23T16:52:27.575] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2026-06-23T16:52:27.590] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2026-06-23T16:52:27.603] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2026-06-23T16:52:27.799] [DEBUG] debug-file - Sdk init in 229 ms 
+[2026-06-23T16:52:27.837] [DEBUG] debug-file - Project task initialization takes 31 ms 
+[2026-06-23T16:52:27.838] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:27.839] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\hvigorfile.ts
+[2026-06-23T16:52:27.839] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\hvigorfile.ts
+[2026-06-23T16:52:27.842] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\products\phone\hvigorfile.ts
+[2026-06-23T16:52:27.906] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:27.907] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:27.908] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:27.912] [DEBUG] debug-file - Hap plugin creating...
+[2026-06-23T16:52:27.924] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:27.992] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=phone, buildMode=debug
+[2026-06-23T16:52:27.993] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:27.996] [DEBUG] debug-file - Module 'phone' target 'default' build option initialized
+[2026-06-23T16:52:27.997] [DEBUG] debug-file - End initialize module-target build option map, moduleName=phone
+[2026-06-23T16:52:27.997] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=phone, buildMode=release
+[2026-06-23T16:52:27.998] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.001] [DEBUG] debug-file - Module 'phone' target 'default' build option initialized
+[2026-06-23T16:52:28.002] [DEBUG] debug-file - End initialize module-target build option map, moduleName=phone
+[2026-06-23T16:52:28.002] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=phone, buildMode=debug
+[2026-06-23T16:52:28.003] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.004] [DEBUG] debug-file - Module 'phone' target 'default' build option initialized
+[2026-06-23T16:52:28.005] [DEBUG] debug-file - End initialize module-target build option map, moduleName=phone
+[2026-06-23T16:52:28.007] [DEBUG] debug-file - Obtain build option for module 'phone' target 'default'in this build.
+[2026-06-23T16:52:28.038] [DEBUG] debug-file - Module phone task initialization takes 27 ms 
+[2026-06-23T16:52:28.038] [DEBUG] debug-file - Hap plugin register hook start...
+[2026-06-23T16:52:28.039] [DEBUG] debug-file - Hap plugin register hook end...
+[2026-06-23T16:52:28.039] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.040] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.040] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\products\phone\hvigorfile.ts
+[2026-06-23T16:52:28.041] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\products\phone\hvigorfile.ts
+[2026-06-23T16:52:28.047] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\commons\base\hvigorfile.ts
+[2026-06-23T16:52:28.108] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:28.108] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:28.109] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:28.109] [DEBUG] debug-file - Har plugin creating...
+[2026-06-23T16:52:28.112] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:28.345] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=base, buildMode=debug
+[2026-06-23T16:52:28.346] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.347] [DEBUG] debug-file - Module 'base' target 'default' build option initialized
+[2026-06-23T16:52:28.347] [DEBUG] debug-file - End initialize module-target build option map, moduleName=base
+[2026-06-23T16:52:28.347] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=base, buildMode=release
+[2026-06-23T16:52:28.347] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.349] [DEBUG] debug-file - Module 'base' target 'default' build option initialized
+[2026-06-23T16:52:28.350] [DEBUG] debug-file - End initialize module-target build option map, moduleName=base
+[2026-06-23T16:52:28.351] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=base, buildMode=debug
+[2026-06-23T16:52:28.351] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.352] [DEBUG] debug-file - Module 'base' target 'default' build option initialized
+[2026-06-23T16:52:28.353] [DEBUG] debug-file - End initialize module-target build option map, moduleName=base
+[2026-06-23T16:52:28.353] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:28.363] [DEBUG] debug-file - Module base task initialization takes 6 ms 
+[2026-06-23T16:52:28.363] [DEBUG] debug-file - Har plugin register hook start...
+[2026-06-23T16:52:28.364] [DEBUG] debug-file - Har plugin register hook end...
+[2026-06-23T16:52:28.364] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.364] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.364] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\commons\base\hvigorfile.ts
+[2026-06-23T16:52:28.365] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\commons\base\hvigorfile.ts
+[2026-06-23T16:52:28.366] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\features\detail\hvigorfile.ts
+[2026-06-23T16:52:28.391] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:28.392] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:28.392] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:28.392] [DEBUG] debug-file - Har plugin creating...
+[2026-06-23T16:52:28.395] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:28.404] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=detail, buildMode=debug
+[2026-06-23T16:52:28.404] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.406] [DEBUG] debug-file - Module 'detail' target 'default' build option initialized
+[2026-06-23T16:52:28.406] [DEBUG] debug-file - End initialize module-target build option map, moduleName=detail
+[2026-06-23T16:52:28.407] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=detail, buildMode=release
+[2026-06-23T16:52:28.407] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.408] [DEBUG] debug-file - Module 'detail' target 'default' build option initialized
+[2026-06-23T16:52:28.409] [DEBUG] debug-file - End initialize module-target build option map, moduleName=detail
+[2026-06-23T16:52:28.410] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=detail, buildMode=debug
+[2026-06-23T16:52:28.410] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.413] [DEBUG] debug-file - Module 'detail' target 'default' build option initialized
+[2026-06-23T16:52:28.413] [DEBUG] debug-file - End initialize module-target build option map, moduleName=detail
+[2026-06-23T16:52:28.413] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:28.419] [DEBUG] debug-file - Module detail task initialization takes 3 ms 
+[2026-06-23T16:52:28.420] [DEBUG] debug-file - Har plugin register hook start...
+[2026-06-23T16:52:28.420] [DEBUG] debug-file - Har plugin register hook end...
+[2026-06-23T16:52:28.420] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.420] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.420] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\features\detail\hvigorfile.ts
+[2026-06-23T16:52:28.421] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\features\detail\hvigorfile.ts
+[2026-06-23T16:52:28.422] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\features\hot\hvigorfile.ts
+[2026-06-23T16:52:28.453] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:28.454] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:28.455] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:28.455] [DEBUG] debug-file - Har plugin creating...
+[2026-06-23T16:52:28.457] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:28.464] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=hot, buildMode=debug
+[2026-06-23T16:52:28.464] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.466] [DEBUG] debug-file - Module 'hot' target 'default' build option initialized
+[2026-06-23T16:52:28.466] [DEBUG] debug-file - End initialize module-target build option map, moduleName=hot
+[2026-06-23T16:52:28.467] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=hot, buildMode=release
+[2026-06-23T16:52:28.468] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.469] [DEBUG] debug-file - Module 'hot' target 'default' build option initialized
+[2026-06-23T16:52:28.469] [DEBUG] debug-file - End initialize module-target build option map, moduleName=hot
+[2026-06-23T16:52:28.470] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=hot, buildMode=debug
+[2026-06-23T16:52:28.470] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.471] [DEBUG] debug-file - Module 'hot' target 'default' build option initialized
+[2026-06-23T16:52:28.471] [DEBUG] debug-file - End initialize module-target build option map, moduleName=hot
+[2026-06-23T16:52:28.472] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:28.475] [DEBUG] debug-file - Module hot task initialization takes 2 ms 
+[2026-06-23T16:52:28.475] [DEBUG] debug-file - Har plugin register hook start...
+[2026-06-23T16:52:28.476] [DEBUG] debug-file - Har plugin register hook end...
+[2026-06-23T16:52:28.476] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.476] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.476] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\features\hot\hvigorfile.ts
+[2026-06-23T16:52:28.476] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\features\hot\hvigorfile.ts
+[2026-06-23T16:52:28.479] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\features\rank\hvigorfile.ts
+[2026-06-23T16:52:28.499] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:28.500] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:28.500] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:28.500] [DEBUG] debug-file - Har plugin creating...
+[2026-06-23T16:52:28.503] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:28.510] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=rank, buildMode=debug
+[2026-06-23T16:52:28.511] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.512] [DEBUG] debug-file - Module 'rank' target 'default' build option initialized
+[2026-06-23T16:52:28.512] [DEBUG] debug-file - End initialize module-target build option map, moduleName=rank
+[2026-06-23T16:52:28.512] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=rank, buildMode=release
+[2026-06-23T16:52:28.513] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.515] [DEBUG] debug-file - Module 'rank' target 'default' build option initialized
+[2026-06-23T16:52:28.516] [DEBUG] debug-file - End initialize module-target build option map, moduleName=rank
+[2026-06-23T16:52:28.516] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=rank, buildMode=debug
+[2026-06-23T16:52:28.516] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.517] [DEBUG] debug-file - Module 'rank' target 'default' build option initialized
+[2026-06-23T16:52:28.517] [DEBUG] debug-file - End initialize module-target build option map, moduleName=rank
+[2026-06-23T16:52:28.518] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:28.522] [DEBUG] debug-file - Module rank task initialization takes 3 ms 
+[2026-06-23T16:52:28.523] [DEBUG] debug-file - Har plugin register hook start...
+[2026-06-23T16:52:28.523] [DEBUG] debug-file - Har plugin register hook end...
+[2026-06-23T16:52:28.523] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.524] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.524] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\features\rank\hvigorfile.ts
+[2026-06-23T16:52:28.524] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\features\rank\hvigorfile.ts
+[2026-06-23T16:52:28.525] [DEBUG] debug-file - hvigorfile, resolving F:\MultiCommunityApplication\features\picture\hvigorfile.ts
+[2026-06-23T16:52:28.550] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-06-23T16:52:28.550] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-06-23T16:52:28.550] [DEBUG] debug-file - Starting plugin build process
+[2026-06-23T16:52:28.551] [DEBUG] debug-file - Har plugin creating...
+[2026-06-23T16:52:28.553] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\MultiCommunityApplication\hvigorfile.ts
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-06-23T16:52:28.563] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=picture, buildMode=debug
+[2026-06-23T16:52:28.564] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.565] [DEBUG] debug-file - Module 'picture' target 'default' build option initialized
+[2026-06-23T16:52:28.565] [DEBUG] debug-file - End initialize module-target build option map, moduleName=picture
+[2026-06-23T16:52:28.566] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=picture, buildMode=release
+[2026-06-23T16:52:28.566] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.569] [DEBUG] debug-file - Module 'picture' target 'default' build option initialized
+[2026-06-23T16:52:28.569] [DEBUG] debug-file - End initialize module-target build option map, moduleName=picture
+[2026-06-23T16:52:28.570] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=picture, buildMode=debug
+[2026-06-23T16:52:28.570] [DEBUG] debug-file - Target 'default' config initialized
+[2026-06-23T16:52:28.571] [DEBUG] debug-file - Module 'picture' target 'default' build option initialized
+[2026-06-23T16:52:28.572] [DEBUG] debug-file - End initialize module-target build option map, moduleName=picture
+[2026-06-23T16:52:28.572] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:28.576] [DEBUG] debug-file - Module picture task initialization takes 2 ms 
+[2026-06-23T16:52:28.578] [DEBUG] debug-file - Har plugin register hook start...
+[2026-06-23T16:52:28.580] [DEBUG] debug-file - Har plugin register hook end...
+[2026-06-23T16:52:28.580] [DEBUG] debug-file - Plugin build process completed
+[2026-06-23T16:52:28.581] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-06-23T16:52:28.583] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\MultiCommunityApplication\features\picture\hvigorfile.ts
+[2026-06-23T16:52:28.584] [DEBUG] debug-file - hvigorfile, resolve finished F:\MultiCommunityApplication\features\picture\hvigorfile.ts
+[2026-06-23T16:52:28.698] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 111 ms 
+[2026-06-23T16:52:28.700] [DEBUG] debug-file - project has submodules:phone,base,detail,hot,rank,picture
+[2026-06-23T16:52:28.704] [DEBUG] debug-file - module:base no need to execute packageHap
+[2026-06-23T16:52:28.705] [DEBUG] debug-file - module:detail no need to execute packageHap
+[2026-06-23T16:52:28.707] [DEBUG] debug-file - module:hot no need to execute packageHap
+[2026-06-23T16:52:28.709] [DEBUG] debug-file - module:rank no need to execute packageHap
+[2026-06-23T16:52:28.711] [DEBUG] debug-file - module:picture no need to execute packageHap
+[2026-06-23T16:52:28.743] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2026-06-23T16:52:28.806] [DEBUG] debug-file - load to the disk finished
+[2026-06-23T16:52:28.816] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:28.831] [DEBUG] debug-file - Module MultiCommunityApplication Collected Dependency: 
+[2026-06-23T16:52:28.832] [DEBUG] debug-file - Module MultiCommunityApplication's total dependency: 0
+[2026-06-23T16:52:28.840] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:28.939] [DEBUG] debug-file - Module phone Collected Dependency: F:\MultiCommunityApplication\features\hot,F:\MultiCommunityApplication\commons\base,F:\MultiCommunityApplication\features\detail,F:\MultiCommunityApplication\features\rank,F:\MultiCommunityApplication\features\picture
+[2026-06-23T16:52:28.940] [DEBUG] debug-file - Module phone's total dependency: 5
+[2026-06-23T16:52:28.963] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:28.969] [DEBUG] debug-file - Module base Collected Dependency: 
+[2026-06-23T16:52:28.970] [DEBUG] debug-file - Module base's total dependency: 0
+[2026-06-23T16:52:28.978] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:28.992] [DEBUG] debug-file - Module detail Collected Dependency: F:\MultiCommunityApplication\commons\base
+[2026-06-23T16:52:28.992] [DEBUG] debug-file - Module detail's total dependency: 1
+[2026-06-23T16:52:28.998] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:29.014] [DEBUG] debug-file - Module hot Collected Dependency: F:\MultiCommunityApplication\features\rank,F:\MultiCommunityApplication\commons\base,F:\MultiCommunityApplication\features\detail
+[2026-06-23T16:52:29.015] [DEBUG] debug-file - Module hot's total dependency: 3
+[2026-06-23T16:52:29.024] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:29.036] [DEBUG] debug-file - Module rank Collected Dependency: F:\MultiCommunityApplication\commons\base
+[2026-06-23T16:52:29.036] [DEBUG] debug-file - Module rank's total dependency: 1
+[2026-06-23T16:52:29.042] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-06-23T16:52:29.051] [DEBUG] debug-file - Module picture Collected Dependency: F:\MultiCommunityApplication\commons\base,F:\MultiCommunityApplication\features\detail
+[2026-06-23T16:52:29.052] [DEBUG] debug-file - Module picture's total dependency: 2
+[2026-06-23T16:52:29.081] [DEBUG] debug-file - Configuration phase cost:1 min 22 s 353 ms 
+[2026-06-23T16:52:29.106] [DEBUG] debug-file - Configuration task cost before running: 1 min 22 s 589 ms 
+[2026-06-23T16:52:29.145] [DEBUG] debug-file - Executing task :phone:default@PreBuild
+[2026-06-23T16:52:29.195] [DEBUG] debug-file - Task 'phone:default@PreBuild' cost while wrapping incremental declarations: 4 ms 
+[2026-06-23T16:52:29.241] [DEBUG] debug-file - Incremental task phone:default@PreBuild pre-execution cost: 27 ms .
+[2026-06-23T16:52:29.242] [DEBUG] debug-file - phone : default@PreBuild cost memory 0.7314910888671875
+[2026-06-23T16:52:29.250] [INFO] debug-file - UP-TO-DATE :phone:default@PreBuild...  
+[2026-06-23T16:52:29.261] [DEBUG] debug-file - Executing task :hot:default@PreBuild
+[2026-06-23T16:52:29.264] [DEBUG] debug-file - Task 'hot:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.288] [DEBUG] debug-file - Incremental task hot:default@PreBuild pre-execution cost: 19 ms .
+[2026-06-23T16:52:29.288] [DEBUG] debug-file - hot : default@PreBuild cost memory 0.27989959716796875
+[2026-06-23T16:52:29.294] [INFO] debug-file - UP-TO-DATE :hot:default@PreBuild...  
+[2026-06-23T16:52:29.303] [DEBUG] debug-file - Executing task :rank:default@PreBuild
+[2026-06-23T16:52:29.306] [DEBUG] debug-file - Task 'rank:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.327] [DEBUG] debug-file - Incremental task rank:default@PreBuild pre-execution cost: 16 ms .
+[2026-06-23T16:52:29.327] [DEBUG] debug-file - rank : default@PreBuild cost memory 0.2762451171875
+[2026-06-23T16:52:29.335] [INFO] debug-file - UP-TO-DATE :rank:default@PreBuild...  
+[2026-06-23T16:52:29.342] [DEBUG] debug-file - Executing task :base:default@PreBuild
+[2026-06-23T16:52:29.345] [DEBUG] debug-file - Task 'base:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.364] [DEBUG] debug-file - Incremental task base:default@PreBuild pre-execution cost: 13 ms .
+[2026-06-23T16:52:29.365] [DEBUG] debug-file - base : default@PreBuild cost memory 0.25823974609375
+[2026-06-23T16:52:29.372] [INFO] debug-file - UP-TO-DATE :base:default@PreBuild...  
+[2026-06-23T16:52:29.381] [DEBUG] debug-file - Executing task :detail:default@PreBuild
+[2026-06-23T16:52:29.384] [DEBUG] debug-file - Task 'detail:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.403] [DEBUG] debug-file - Incremental task detail:default@PreBuild pre-execution cost: 13 ms .
+[2026-06-23T16:52:29.404] [DEBUG] debug-file - detail : default@PreBuild cost memory 0.2680206298828125
+[2026-06-23T16:52:29.410] [INFO] debug-file - UP-TO-DATE :detail:default@PreBuild...  
+[2026-06-23T16:52:29.419] [DEBUG] debug-file - Executing task :picture:default@PreBuild
+[2026-06-23T16:52:29.422] [DEBUG] debug-file - Task 'picture:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.443] [DEBUG] debug-file - Incremental task picture:default@PreBuild pre-execution cost: 12 ms .
+[2026-06-23T16:52:29.444] [DEBUG] debug-file - picture : default@PreBuild cost memory 0.27265167236328125
+[2026-06-23T16:52:29.450] [INFO] debug-file - UP-TO-DATE :picture:default@PreBuild...  
+[2026-06-23T16:52:29.456] [DEBUG] debug-file - Executing task :phone:default@CreateModuleInfo
+[2026-06-23T16:52:29.459] [DEBUG] debug-file - Task 'phone:default@CreateModuleInfo' cost while wrapping incremental declarations: 3 ms 
+[2026-06-23T16:52:29.463] [DEBUG] debug-file - phone : default@CreateModuleInfo cost memory 0.058746337890625
+[2026-06-23T16:52:29.467] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 22 s 949 ms 
+[2026-06-23T16:52:29.470] [INFO] debug-file - Finished :phone:default@CreateModuleInfo... after 11 ms 
+[2026-06-23T16:52:29.484] [DEBUG] debug-file - Executing task :phone:default@GenerateMetadata
+[2026-06-23T16:52:29.492] [DEBUG] debug-file - Task 'phone:default@GenerateMetadata' cost while wrapping incremental declarations: 5 ms 
+[2026-06-23T16:52:29.505] [DEBUG] debug-file - Incremental task phone:default@GenerateMetadata pre-execution cost: 10 ms .
+[2026-06-23T16:52:29.508] [DEBUG] debug-file - phone : default@GenerateMetadata cost memory 0.101409912109375
+[2026-06-23T16:52:29.511] [INFO] debug-file - UP-TO-DATE :phone:default@GenerateMetadata...  
+[2026-06-23T16:52:29.523] [DEBUG] debug-file - Executing task :phone:default@PreCheckSyscap
+[2026-06-23T16:52:29.525] [DEBUG] debug-file - phone : default@PreCheckSyscap cost memory 0.0167694091796875
+[2026-06-23T16:52:29.526] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 8 ms 
+[2026-06-23T16:52:29.527] [INFO] debug-file - Finished :phone:default@PreCheckSyscap... after 3 ms 
+[2026-06-23T16:52:29.536] [DEBUG] debug-file - Executing task :phone:default@GeneratePkgContextInfo
+[2026-06-23T16:52:29.619] [DEBUG] debug-file - Task 'phone:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.624] [DEBUG] debug-file - Incremental task phone:default@GeneratePkgContextInfo pre-execution cost: 4 ms .
+[2026-06-23T16:52:29.625] [DEBUG] debug-file - phone : default@GeneratePkgContextInfo cost memory 0.783843994140625
+[2026-06-23T16:52:29.627] [INFO] debug-file - UP-TO-DATE :phone:default@GeneratePkgContextInfo...  
+[2026-06-23T16:52:29.642] [DEBUG] debug-file - Executing task :phone:default@ProcessIntegratedHsp
+[2026-06-23T16:52:29.644] [DEBUG] debug-file - phone:default@ProcessIntegratedHsp is not up-to-date, since the output file 'F:\MultiCommunityApplication\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2026-06-23T16:52:29.644] [DEBUG] debug-file - Incremental task phone:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2026-06-23T16:52:29.646] [DEBUG] debug-file - phone : default@ProcessIntegratedHsp cost memory 0.06807708740234375
+[2026-06-23T16:52:29.646] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 128 ms 
+[2026-06-23T16:52:29.647] [INFO] debug-file - Finished :phone:default@ProcessIntegratedHsp... after 5 ms 
+[2026-06-23T16:52:29.653] [DEBUG] debug-file - Executing task :base:default@CreateHarBuildProfile
+[2026-06-23T16:52:29.655] [DEBUG] debug-file - Task 'base:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:29.660] [DEBUG] debug-file - Incremental task base:default@CreateHarBuildProfile pre-execution cost: 4 ms .
+[2026-06-23T16:52:29.660] [DEBUG] debug-file - base : default@CreateHarBuildProfile cost memory 0.1044769287109375
+[2026-06-23T16:52:29.663] [INFO] debug-file - UP-TO-DATE :base:default@CreateHarBuildProfile...  
+[2026-06-23T16:52:29.670] [DEBUG] debug-file - Executing task :base:default@ConfigureCmake
+[2026-06-23T16:52:29.672] [DEBUG] debug-file - base : default@ConfigureCmake cost memory 0.017974853515625
+[2026-06-23T16:52:29.673] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 155 ms 
+[2026-06-23T16:52:29.675] [INFO] debug-file - Finished :base:default@ConfigureCmake... after 3 ms 
+[2026-06-23T16:52:29.683] [DEBUG] debug-file - Executing task :base:default@MergeProfile
+[2026-06-23T16:52:29.685] [DEBUG] debug-file - Task 'base:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:29.698] [DEBUG] debug-file - Incremental task base:default@MergeProfile pre-execution cost: 8 ms .
+[2026-06-23T16:52:29.699] [DEBUG] debug-file - base : default@MergeProfile cost memory 0.13437652587890625
+[2026-06-23T16:52:29.701] [INFO] debug-file - UP-TO-DATE :base:default@MergeProfile...  
+[2026-06-23T16:52:29.709] [DEBUG] debug-file - Executing task :phone:default@SyscapTransform
+[2026-06-23T16:52:29.710] [DEBUG] debug-file - File: 'F:\MultiCommunityApplication\products\phone\src\main\syscap.json' from 'sysCapJsonPath' is not exists, just ignore.
+[2026-06-23T16:52:29.720] [DEBUG] debug-file - Task 'phone:default@SyscapTransform' cost while wrapping incremental declarations: 11 ms 
+[2026-06-23T16:52:29.775] [DEBUG] debug-file - phone:default@SyscapTransform is not up-to-date, since the output file 'F:\MultiCommunityApplication\products\phone\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2026-06-23T16:52:29.776] [DEBUG] debug-file - Incremental task phone:default@SyscapTransform pre-execution cost: 54 ms .
+[2026-06-23T16:52:29.782] [DEBUG] debug-file - phone : default@SyscapTransform cost memory 0.2194366455078125
+[2026-06-23T16:52:29.782] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 265 ms 
+[2026-06-23T16:52:29.789] [INFO] debug-file - Finished :phone:default@SyscapTransform... after 74 ms 
+[2026-06-23T16:52:29.801] [DEBUG] debug-file - Executing task :phone:default@ProcessRouterMap
+[2026-06-23T16:52:29.836] [DEBUG] debug-file - Incremental task phone:default@ProcessRouterMap pre-execution cost: 22 ms .
+[2026-06-23T16:52:29.837] [DEBUG] debug-file - phone : default@ProcessRouterMap cost memory 0.1783447265625
+[2026-06-23T16:52:29.859] [INFO] debug-file - UP-TO-DATE :phone:default@ProcessRouterMap...  
+[2026-06-23T16:52:29.876] [DEBUG] debug-file - Executing task :phone:default@ProcessShareConfig
+[2026-06-23T16:52:29.898] [DEBUG] debug-file - Incremental task phone:default@ProcessShareConfig pre-execution cost: 9 ms .
+[2026-06-23T16:52:29.899] [DEBUG] debug-file - phone : default@ProcessShareConfig cost memory 0.1667327880859375
+[2026-06-23T16:52:29.902] [INFO] debug-file - UP-TO-DATE :phone:default@ProcessShareConfig...  
+[2026-06-23T16:52:29.910] [DEBUG] debug-file - Executing task :phone:default@ProcessStartupConfig
+[2026-06-23T16:52:29.913] [DEBUG] debug-file - Task 'phone:default@ProcessStartupConfig' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:29.920] [DEBUG] debug-file - phone:default@ProcessStartupConfig is not up-to-date, since the output file 'F:\MultiCommunityApplication\products\phone\build\default\intermediates\startup\default\startup_config.json' does not exist.
+[2026-06-23T16:52:29.921] [DEBUG] debug-file - Incremental task phone:default@ProcessStartupConfig pre-execution cost: 4 ms .
+[2026-06-23T16:52:29.971] [DEBUG] debug-file - phone : default@ProcessStartupConfig cost memory 0.186920166015625
+[2026-06-23T16:52:29.972] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 454 ms 
+[2026-06-23T16:52:29.976] [INFO] debug-file - Finished :phone:default@ProcessStartupConfig... after 62 ms 
+[2026-06-23T16:52:29.983] [DEBUG] debug-file - Executing task :detail:default@CreateHarBuildProfile
+[2026-06-23T16:52:29.985] [DEBUG] debug-file - Task 'detail:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:29.990] [DEBUG] debug-file - Incremental task detail:default@CreateHarBuildProfile pre-execution cost: 5 ms .
+[2026-06-23T16:52:29.991] [DEBUG] debug-file - detail : default@CreateHarBuildProfile cost memory 0.09597015380859375
+[2026-06-23T16:52:29.994] [INFO] debug-file - UP-TO-DATE :detail:default@CreateHarBuildProfile...  
+[2026-06-23T16:52:29.997] [DEBUG] debug-file - Executing task :rank:default@CreateHarBuildProfile
+[2026-06-23T16:52:29.999] [DEBUG] debug-file - Task 'rank:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:30.004] [DEBUG] debug-file - Incremental task rank:default@CreateHarBuildProfile pre-execution cost: 4 ms .
+[2026-06-23T16:52:30.005] [DEBUG] debug-file - rank : default@CreateHarBuildProfile cost memory 0.09693145751953125
+[2026-06-23T16:52:30.007] [INFO] debug-file - UP-TO-DATE :rank:default@CreateHarBuildProfile...  
+[2026-06-23T16:52:30.014] [DEBUG] debug-file - Executing task :base:default@BuildNativeWithCmake
+[2026-06-23T16:52:30.016] [DEBUG] debug-file - base : default@BuildNativeWithCmake cost memory 0.0146484375
+[2026-06-23T16:52:30.017] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 499 ms 
+[2026-06-23T16:52:30.019] [INFO] debug-file - Finished :base:default@BuildNativeWithCmake... after 3 ms 
+[2026-06-23T16:52:30.024] [DEBUG] debug-file - Executing task :detail:default@MergeProfile
+[2026-06-23T16:52:30.032] [DEBUG] debug-file - Task 'detail:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.080] [DEBUG] debug-file - Incremental task detail:default@MergeProfile pre-execution cost: 36 ms .
+[2026-06-23T16:52:30.091] [DEBUG] debug-file - detail : default@MergeProfile cost memory 0.1478271484375
+[2026-06-23T16:52:30.121] [INFO] debug-file - UP-TO-DATE :detail:default@MergeProfile...  
+[2026-06-23T16:52:30.134] [DEBUG] debug-file - Executing task :rank:default@MergeProfile
+[2026-06-23T16:52:30.139] [DEBUG] debug-file - Task 'rank:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.161] [DEBUG] debug-file - Incremental task rank:default@MergeProfile pre-execution cost: 17 ms .
+[2026-06-23T16:52:30.162] [DEBUG] debug-file - rank : default@MergeProfile cost memory 0.1461639404296875
+[2026-06-23T16:52:30.167] [INFO] debug-file - UP-TO-DATE :rank:default@MergeProfile...  
+[2026-06-23T16:52:30.174] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.175] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.175] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.175] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.176] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.181] [DEBUG] debug-file - Executing task :phone:default@GenerateLoaderJson
+[2026-06-23T16:52:30.195] [DEBUG] debug-file - Task 'phone:default@GenerateLoaderJson' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:30.210] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.211] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.211] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.212] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.212] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.270] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.273] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.273] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.274] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.279] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.311] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.314] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.315] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.316] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.318] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.325] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.326] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.327] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.328] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.329] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.333] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.334] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.335] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.335] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.335] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.342] [DEBUG] debug-file - Incremental task phone:default@GenerateLoaderJson pre-execution cost: 61 ms .
+[2026-06-23T16:52:30.348] [DEBUG] debug-file - phone : default@GenerateLoaderJson cost memory 0.8968734741210938
+[2026-06-23T16:52:30.360] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.361] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.361] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.361] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.362] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.366] [DEBUG] debug-file - Obtain build option for module 'hot' target 'default'in this build.
+[2026-06-23T16:52:30.366] [DEBUG] debug-file - Obtain build option for module 'base' target 'default'in this build.
+[2026-06-23T16:52:30.367] [DEBUG] debug-file - Obtain build option for module 'detail' target 'default'in this build.
+[2026-06-23T16:52:30.367] [DEBUG] debug-file - Obtain build option for module 'rank' target 'default'in this build.
+[2026-06-23T16:52:30.367] [DEBUG] debug-file - Obtain build option for module 'picture' target 'default'in this build.
+[2026-06-23T16:52:30.367] [INFO] debug-file - UP-TO-DATE :phone:default@GenerateLoaderJson...  
+[2026-06-23T16:52:30.371] [DEBUG] debug-file - Executing task :picture:default@CreateHarBuildProfile
+[2026-06-23T16:52:30.373] [DEBUG] debug-file - Task 'picture:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.376] [DEBUG] debug-file - Incremental task picture:default@CreateHarBuildProfile pre-execution cost: 4 ms .
+[2026-06-23T16:52:30.377] [DEBUG] debug-file - picture : default@CreateHarBuildProfile cost memory 0.11006927490234375
+[2026-06-23T16:52:30.378] [INFO] debug-file - UP-TO-DATE :picture:default@CreateHarBuildProfile...  
+[2026-06-23T16:52:30.381] [DEBUG] debug-file - Executing task :hot:default@CreateHarBuildProfile
+[2026-06-23T16:52:30.382] [DEBUG] debug-file - Task 'hot:default@CreateHarBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.386] [DEBUG] debug-file - Incremental task hot:default@CreateHarBuildProfile pre-execution cost: 4 ms .
+[2026-06-23T16:52:30.387] [DEBUG] debug-file - hot : default@CreateHarBuildProfile cost memory 0.0999298095703125
+[2026-06-23T16:52:30.387] [INFO] debug-file - UP-TO-DATE :hot:default@CreateHarBuildProfile...  
+[2026-06-23T16:52:30.392] [DEBUG] debug-file - Executing task :base:default@BuildNativeWithNinja
+[2026-06-23T16:52:30.394] [DEBUG] debug-file - base : default@BuildNativeWithNinja cost memory 0.020599365234375
+[2026-06-23T16:52:30.394] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 876 ms 
+[2026-06-23T16:52:30.396] [INFO] debug-file - Finished :base:default@BuildNativeWithNinja... after 3 ms 
+[2026-06-23T16:52:30.399] [DEBUG] debug-file - Executing task :detail:default@ConfigureCmake
+[2026-06-23T16:52:30.400] [DEBUG] debug-file - detail : default@ConfigureCmake cost memory 0.0147552490234375
+[2026-06-23T16:52:30.400] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 882 ms 
+[2026-06-23T16:52:30.401] [INFO] debug-file - Finished :detail:default@ConfigureCmake... after 2 ms 
+[2026-06-23T16:52:30.405] [DEBUG] debug-file - Executing task :rank:default@ConfigureCmake
+[2026-06-23T16:52:30.406] [DEBUG] debug-file - rank : default@ConfigureCmake cost memory 0.02147674560546875
+[2026-06-23T16:52:30.407] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 889 ms 
+[2026-06-23T16:52:30.408] [INFO] debug-file - Finished :rank:default@ConfigureCmake... after 2 ms 
+[2026-06-23T16:52:30.411] [DEBUG] debug-file - Executing task :picture:default@MergeProfile
+[2026-06-23T16:52:30.412] [DEBUG] debug-file - Task 'picture:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.420] [DEBUG] debug-file - Incremental task picture:default@MergeProfile pre-execution cost: 6 ms .
+[2026-06-23T16:52:30.420] [DEBUG] debug-file - picture : default@MergeProfile cost memory 0.1752777099609375
+[2026-06-23T16:52:30.422] [INFO] debug-file - UP-TO-DATE :picture:default@MergeProfile...  
+[2026-06-23T16:52:30.425] [DEBUG] debug-file - Executing task :hot:default@MergeProfile
+[2026-06-23T16:52:30.426] [DEBUG] debug-file - Task 'hot:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.437] [DEBUG] debug-file - Incremental task hot:default@MergeProfile pre-execution cost: 10 ms .
+[2026-06-23T16:52:30.438] [DEBUG] debug-file - hot : default@MergeProfile cost memory 0.19374847412109375
+[2026-06-23T16:52:30.440] [INFO] debug-file - UP-TO-DATE :hot:default@MergeProfile...  
+[2026-06-23T16:52:30.445] [DEBUG] debug-file - Executing task :phone:default@CreateBuildProfile
+[2026-06-23T16:52:30.447] [DEBUG] debug-file - Task 'phone:default@CreateBuildProfile' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:30.453] [DEBUG] debug-file - Incremental task phone:default@CreateBuildProfile pre-execution cost: 6 ms .
+[2026-06-23T16:52:30.454] [DEBUG] debug-file - phone : default@CreateBuildProfile cost memory 0.10391998291015625
+[2026-06-23T16:52:30.455] [INFO] debug-file - UP-TO-DATE :phone:default@CreateBuildProfile...  
+[2026-06-23T16:52:30.459] [DEBUG] debug-file - Executing task :base:default@ProcessLibs
+[2026-06-23T16:52:30.474] [DEBUG] debug-file - Incremental task base:default@ProcessLibs pre-execution cost: 6 ms .
+[2026-06-23T16:52:30.475] [DEBUG] debug-file - base : default@ProcessLibs cost memory 0.12465667724609375
+[2026-06-23T16:52:30.477] [INFO] debug-file - UP-TO-DATE :base:default@ProcessLibs...  
+[2026-06-23T16:52:30.481] [DEBUG] debug-file - Executing task :detail:default@BuildNativeWithCmake
+[2026-06-23T16:52:30.482] [DEBUG] debug-file - detail : default@BuildNativeWithCmake cost memory 0.01476287841796875
+[2026-06-23T16:52:30.482] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 964 ms 
+[2026-06-23T16:52:30.483] [INFO] debug-file - Finished :detail:default@BuildNativeWithCmake... after 2 ms 
+[2026-06-23T16:52:30.486] [DEBUG] debug-file - Executing task :rank:default@BuildNativeWithCmake
+[2026-06-23T16:52:30.487] [DEBUG] debug-file - rank : default@BuildNativeWithCmake cost memory 0.01717376708984375
+[2026-06-23T16:52:30.487] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 23 s 969 ms 
+[2026-06-23T16:52:30.488] [INFO] debug-file - Finished :rank:default@BuildNativeWithCmake... after 2 ms 
+[2026-06-23T16:52:30.493] [DEBUG] debug-file - Executing task :phone:default@MergeProfile
+[2026-06-23T16:52:30.497] [DEBUG] debug-file - Task 'phone:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.512] [DEBUG] debug-file - Incremental task phone:default@MergeProfile pre-execution cost: 12 ms .
+[2026-06-23T16:52:30.513] [DEBUG] debug-file - phone : default@MergeProfile cost memory 0.25386810302734375
+[2026-06-23T16:52:30.516] [INFO] debug-file - UP-TO-DATE :phone:default@MergeProfile...  
+[2026-06-23T16:52:30.521] [DEBUG] debug-file - Executing task :base:default@DoNativeStrip
+[2026-06-23T16:52:30.522] [DEBUG] debug-file - Task 'base:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.526] [DEBUG] debug-file - Incremental task base:default@DoNativeStrip pre-execution cost: 3 ms .
+[2026-06-23T16:52:30.527] [DEBUG] debug-file - base : default@DoNativeStrip cost memory 0.083343505859375
+[2026-06-23T16:52:30.528] [INFO] debug-file - UP-TO-DATE :base:default@DoNativeStrip...  
+[2026-06-23T16:52:30.530] [DEBUG] debug-file - Executing task :picture:default@ConfigureCmake
+[2026-06-23T16:52:30.531] [DEBUG] debug-file - picture : default@ConfigureCmake cost memory 0.01755523681640625
+[2026-06-23T16:52:30.531] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 13 ms 
+[2026-06-23T16:52:30.532] [INFO] debug-file - Finished :picture:default@ConfigureCmake... after 1 ms 
+[2026-06-23T16:52:30.536] [DEBUG] debug-file - Executing task :hot:default@ConfigureCmake
+[2026-06-23T16:52:30.537] [DEBUG] debug-file - hot : default@ConfigureCmake cost memory 0.01618194580078125
+[2026-06-23T16:52:30.538] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 20 ms 
+[2026-06-23T16:52:30.538] [INFO] debug-file - Finished :hot:default@ConfigureCmake... after 2 ms 
+[2026-06-23T16:52:30.545] [DEBUG] debug-file - Executing task :phone:default@MakePackInfo
+[2026-06-23T16:52:30.555] [DEBUG] debug-file - Incremental task phone:default@MakePackInfo pre-execution cost: 6 ms .
+[2026-06-23T16:52:30.556] [DEBUG] debug-file - phone : default@MakePackInfo cost memory 0.1204681396484375
+[2026-06-23T16:52:30.557] [INFO] debug-file - UP-TO-DATE :phone:default@MakePackInfo...  
+[2026-06-23T16:52:30.565] [DEBUG] debug-file - Executing task :phone:default@ProcessProfile
+[2026-06-23T16:52:30.607] [DEBUG] debug-file - Task 'phone:default@ProcessProfile' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:30.615] [DEBUG] debug-file - Incremental task phone:default@ProcessProfile pre-execution cost: 7 ms .
+[2026-06-23T16:52:30.616] [DEBUG] debug-file - phone : default@ProcessProfile cost memory 0.15093994140625
+[2026-06-23T16:52:30.617] [INFO] debug-file - UP-TO-DATE :phone:default@ProcessProfile...  
+[2026-06-23T16:52:30.622] [DEBUG] debug-file - Executing task :detail:default@BuildNativeWithNinja
+[2026-06-23T16:52:30.625] [DEBUG] debug-file - detail : default@BuildNativeWithNinja cost memory 0.02141571044921875
+[2026-06-23T16:52:30.626] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 108 ms 
+[2026-06-23T16:52:30.629] [INFO] debug-file - Finished :detail:default@BuildNativeWithNinja... after 4 ms 
+[2026-06-23T16:52:30.635] [DEBUG] debug-file - Executing task :rank:default@BuildNativeWithNinja
+[2026-06-23T16:52:30.639] [DEBUG] debug-file - rank : default@BuildNativeWithNinja cost memory 0.02310943603515625
+[2026-06-23T16:52:30.640] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 122 ms 
+[2026-06-23T16:52:30.642] [INFO] debug-file - Finished :rank:default@BuildNativeWithNinja... after 6 ms 
+[2026-06-23T16:52:30.647] [DEBUG] debug-file - Executing task :picture:default@BuildNativeWithCmake
+[2026-06-23T16:52:30.652] [DEBUG] debug-file - picture : default@BuildNativeWithCmake cost memory 0.01731109619140625
+[2026-06-23T16:52:30.655] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 136 ms 
+[2026-06-23T16:52:30.656] [INFO] debug-file - Finished :picture:default@BuildNativeWithCmake... after 8 ms 
+[2026-06-23T16:52:30.662] [DEBUG] debug-file - Executing task :hot:default@BuildNativeWithCmake
+[2026-06-23T16:52:30.663] [DEBUG] debug-file - hot : default@BuildNativeWithCmake cost memory 0.01720428466796875
+[2026-06-23T16:52:30.663] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 145 ms 
+[2026-06-23T16:52:30.665] [INFO] debug-file - Finished :hot:default@BuildNativeWithCmake... after 2 ms 
+[2026-06-23T16:52:30.683] [DEBUG] debug-file - restool module names: phone,base,detail,hot,rank,picture; moduleName=phone, taskName=default@ProcessResource
+[2026-06-23T16:52:30.726] [DEBUG] debug-file - Executing task :phone:default@ProcessResource
+[2026-06-23T16:52:30.728] [DEBUG] debug-file - Task 'phone:default@ProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:30.733] [DEBUG] debug-file - Incremental task phone:default@ProcessResource pre-execution cost: 4 ms .
+[2026-06-23T16:52:30.734] [DEBUG] debug-file - phone : default@ProcessResource cost memory 0.15145111083984375
+[2026-06-23T16:52:30.739] [INFO] debug-file - UP-TO-DATE :phone:default@ProcessResource...  
+[2026-06-23T16:52:30.741] [DEBUG] debug-file - Executing task :detail:default@ProcessLibs
+[2026-06-23T16:52:30.747] [DEBUG] debug-file - Incremental task detail:default@ProcessLibs pre-execution cost: 3 ms .
+[2026-06-23T16:52:30.748] [DEBUG] debug-file - detail : default@ProcessLibs cost memory 0.09966278076171875
+[2026-06-23T16:52:30.749] [INFO] debug-file - UP-TO-DATE :detail:default@ProcessLibs...  
+[2026-06-23T16:52:30.751] [DEBUG] debug-file - Executing task :rank:default@ProcessLibs
+[2026-06-23T16:52:30.756] [DEBUG] debug-file - Incremental task rank:default@ProcessLibs pre-execution cost: 3 ms .
+[2026-06-23T16:52:30.756] [DEBUG] debug-file - rank : default@ProcessLibs cost memory 0.1008453369140625
+[2026-06-23T16:52:30.758] [INFO] debug-file - UP-TO-DATE :rank:default@ProcessLibs...  
+[2026-06-23T16:52:30.762] [DEBUG] debug-file - Executing task :phone:default@ConfigureCmake
+[2026-06-23T16:52:30.762] [DEBUG] debug-file - phone : default@ConfigureCmake cost memory 0.01624298095703125
+[2026-06-23T16:52:30.763] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 245 ms 
+[2026-06-23T16:52:30.764] [INFO] debug-file - Finished :phone:default@ConfigureCmake... after 2 ms 
+[2026-06-23T16:52:30.769] [DEBUG] debug-file - restool module names: phone,base,detail,hot,rank,picture; moduleName=phone, taskName=default@CompileResource
+[2026-06-23T16:52:30.778] [DEBUG] debug-file - Executing task :phone:default@CompileResource
+[2026-06-23T16:52:31.091] [DEBUG] debug-file - Incremental task phone:default@CompileResource pre-execution cost: 285 ms .
+[2026-06-23T16:52:31.091] [DEBUG] debug-file - phone : default@CompileResource cost memory -10.9713134765625
+[2026-06-23T16:52:31.095] [INFO] debug-file - UP-TO-DATE :phone:default@CompileResource...  
+[2026-06-23T16:52:31.100] [DEBUG] debug-file - Executing task :detail:default@DoNativeStrip
+[2026-06-23T16:52:31.101] [DEBUG] debug-file - Task 'detail:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.107] [DEBUG] debug-file - Incremental task detail:default@DoNativeStrip pre-execution cost: 6 ms .
+[2026-06-23T16:52:31.108] [DEBUG] debug-file - detail : default@DoNativeStrip cost memory 0.0827178955078125
+[2026-06-23T16:52:31.108] [INFO] debug-file - UP-TO-DATE :detail:default@DoNativeStrip...  
+[2026-06-23T16:52:31.112] [DEBUG] debug-file - Executing task :rank:default@DoNativeStrip
+[2026-06-23T16:52:31.113] [DEBUG] debug-file - Task 'rank:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.117] [DEBUG] debug-file - Incremental task rank:default@DoNativeStrip pre-execution cost: 3 ms .
+[2026-06-23T16:52:31.118] [DEBUG] debug-file - rank : default@DoNativeStrip cost memory 0.0841522216796875
+[2026-06-23T16:52:31.120] [INFO] debug-file - UP-TO-DATE :rank:default@DoNativeStrip...  
+[2026-06-23T16:52:31.122] [DEBUG] debug-file - Executing task :phone:default@BuildNativeWithCmake
+[2026-06-23T16:52:31.125] [DEBUG] debug-file - phone : default@BuildNativeWithCmake cost memory 0.01731109619140625
+[2026-06-23T16:52:31.126] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 608 ms 
+[2026-06-23T16:52:31.127] [INFO] debug-file - Finished :phone:default@BuildNativeWithCmake... after 4 ms 
+[2026-06-23T16:52:31.139] [DEBUG] debug-file - Executing task :phone:default@CompileArkTS
+[2026-06-23T16:52:31.143] [DEBUG] debug-file - obfuscationOptions: undefined
+[2026-06-23T16:52:31.163] [DEBUG] debug-file - Task 'phone:default@CompileArkTS' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.273] [DEBUG] debug-file - Incremental task phone:default@CompileArkTS pre-execution cost: 97 ms .
+[2026-06-23T16:52:31.274] [DEBUG] debug-file - phone : default@CompileArkTS cost memory 1.7517471313476562
+[2026-06-23T16:52:31.286] [INFO] debug-file - UP-TO-DATE :phone:default@CompileArkTS...  
+[2026-06-23T16:52:31.293] [DEBUG] debug-file - Executing task :phone:default@BuildJS
+[2026-06-23T16:52:31.295] [DEBUG] debug-file - Task 'phone:default@BuildJS' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.310] [DEBUG] debug-file - phone : default@BuildJS cost memory 0.2124786376953125
+[2026-06-23T16:52:31.312] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 794 ms 
+[2026-06-23T16:52:31.313] [INFO] debug-file - Finished :phone:default@BuildJS... after 20 ms 
+[2026-06-23T16:52:31.317] [DEBUG] debug-file - Executing task :picture:default@BuildNativeWithNinja
+[2026-06-23T16:52:31.320] [DEBUG] debug-file - picture : default@BuildNativeWithNinja cost memory 0.0233001708984375
+[2026-06-23T16:52:31.321] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 803 ms 
+[2026-06-23T16:52:31.322] [INFO] debug-file - Finished :picture:default@BuildNativeWithNinja... after 4 ms 
+[2026-06-23T16:52:31.329] [DEBUG] debug-file - Executing task :hot:default@BuildNativeWithNinja
+[2026-06-23T16:52:31.330] [DEBUG] debug-file - hot : default@BuildNativeWithNinja cost memory 0.0231475830078125
+[2026-06-23T16:52:31.331] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 813 ms 
+[2026-06-23T16:52:31.338] [INFO] debug-file - Finished :hot:default@BuildNativeWithNinja... after 3 ms 
+[2026-06-23T16:52:31.347] [DEBUG] debug-file - Executing task :picture:default@ProcessLibs
+[2026-06-23T16:52:31.364] [DEBUG] debug-file - Incremental task picture:default@ProcessLibs pre-execution cost: 13 ms .
+[2026-06-23T16:52:31.364] [DEBUG] debug-file - picture : default@ProcessLibs cost memory 0.10155487060546875
+[2026-06-23T16:52:31.369] [INFO] debug-file - UP-TO-DATE :picture:default@ProcessLibs...  
+[2026-06-23T16:52:31.371] [DEBUG] debug-file - Executing task :hot:default@ProcessLibs
+[2026-06-23T16:52:31.382] [DEBUG] debug-file - Incremental task hot:default@ProcessLibs pre-execution cost: 8 ms .
+[2026-06-23T16:52:31.382] [DEBUG] debug-file - hot : default@ProcessLibs cost memory 0.10079193115234375
+[2026-06-23T16:52:31.385] [INFO] debug-file - UP-TO-DATE :hot:default@ProcessLibs...  
+[2026-06-23T16:52:31.388] [DEBUG] debug-file - Executing task :picture:default@DoNativeStrip
+[2026-06-23T16:52:31.390] [DEBUG] debug-file - Task 'picture:default@DoNativeStrip' cost while wrapping incremental declarations: 2 ms 
+[2026-06-23T16:52:31.394] [DEBUG] debug-file - Incremental task picture:default@DoNativeStrip pre-execution cost: 3 ms .
+[2026-06-23T16:52:31.394] [DEBUG] debug-file - picture : default@DoNativeStrip cost memory 0.09703826904296875
+[2026-06-23T16:52:31.395] [INFO] debug-file - UP-TO-DATE :picture:default@DoNativeStrip...  
+[2026-06-23T16:52:31.400] [DEBUG] debug-file - Executing task :hot:default@DoNativeStrip
+[2026-06-23T16:52:31.402] [DEBUG] debug-file - Task 'hot:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.407] [DEBUG] debug-file - Incremental task hot:default@DoNativeStrip pre-execution cost: 5 ms .
+[2026-06-23T16:52:31.409] [DEBUG] debug-file - hot : default@DoNativeStrip cost memory 0.0867919921875
+[2026-06-23T16:52:31.411] [INFO] debug-file - UP-TO-DATE :hot:default@DoNativeStrip...  
+[2026-06-23T16:52:31.414] [DEBUG] debug-file - Executing task :phone:default@BuildNativeWithNinja
+[2026-06-23T16:52:31.416] [DEBUG] debug-file - phone : default@BuildNativeWithNinja cost memory 0.02407073974609375
+[2026-06-23T16:52:31.418] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 24 s 900 ms 
+[2026-06-23T16:52:31.420] [INFO] debug-file - Finished :phone:default@BuildNativeWithNinja... after 5 ms 
+[2026-06-23T16:52:31.424] [DEBUG] debug-file - Executing task :phone:default@ProcessLibs
+[2026-06-23T16:52:31.473] [DEBUG] debug-file - Incremental task phone:default@ProcessLibs pre-execution cost: 13 ms .
+[2026-06-23T16:52:31.473] [DEBUG] debug-file - phone : default@ProcessLibs cost memory 1.0705947875976562
+[2026-06-23T16:52:31.477] [INFO] debug-file - UP-TO-DATE :phone:default@ProcessLibs...  
+[2026-06-23T16:52:31.481] [DEBUG] debug-file - Executing task :phone:default@DoNativeStrip
+[2026-06-23T16:52:31.482] [DEBUG] debug-file - Task 'phone:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.484] [DEBUG] debug-file - Incremental task phone:default@DoNativeStrip pre-execution cost: 3 ms .
+[2026-06-23T16:52:31.485] [DEBUG] debug-file - phone : default@DoNativeStrip cost memory 0.08420562744140625
+[2026-06-23T16:52:31.486] [INFO] debug-file - UP-TO-DATE :phone:default@DoNativeStrip...  
+[2026-06-23T16:52:31.490] [DEBUG] debug-file - Executing task :phone:default@CacheNativeLibs
+[2026-06-23T16:52:31.491] [DEBUG] debug-file - Task 'phone:default@CacheNativeLibs' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.496] [DEBUG] debug-file - Incremental task phone:default@CacheNativeLibs pre-execution cost: 5 ms .
+[2026-06-23T16:52:31.497] [DEBUG] debug-file - phone : default@CacheNativeLibs cost memory 0.09899139404296875
+[2026-06-23T16:52:31.497] [INFO] debug-file - UP-TO-DATE :phone:default@CacheNativeLibs...  
+[2026-06-23T16:52:31.503] [DEBUG] debug-file - Executing task :phone:default@GeneratePkgModuleJson
+[2026-06-23T16:52:31.505] [DEBUG] debug-file - File: 'F:\MultiCommunityApplication\products\phone\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-06-23T16:52:31.508] [DEBUG] debug-file - Error occurs while handling @Input 'shouldDeduplicateHar': The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+[2026-06-23T16:52:31.509] [DEBUG] debug-file - Task 'phone:default@GeneratePkgModuleJson' cost while wrapping incremental declarations: 5 ms 
+[2026-06-23T16:52:31.512] [DEBUG] debug-file - Incremental task phone:default@GeneratePkgModuleJson pre-execution cost: 3 ms .
+[2026-06-23T16:52:31.513] [DEBUG] debug-file - phone : default@GeneratePkgModuleJson cost memory 0.11597442626953125
+[2026-06-23T16:52:31.514] [INFO] debug-file - UP-TO-DATE :phone:default@GeneratePkgModuleJson...  
+[2026-06-23T16:52:31.518] [DEBUG] debug-file - Executing task :phone:default@ProcessCompiledResources
+[2026-06-23T16:52:31.518] [DEBUG] debug-file - File: 'F:\MultiCommunityApplication\products\phone\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-06-23T16:52:31.519] [DEBUG] debug-file - Task 'phone:default@ProcessCompiledResources' cost while wrapping incremental declarations: 1 ms 
+[2026-06-23T16:52:31.522] [DEBUG] debug-file - phone : default@ProcessCompiledResources cost memory 0.064239501953125
+[2026-06-23T16:52:31.523] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 25 s 5 ms 
+[2026-06-23T16:52:31.525] [INFO] debug-file - Finished :phone:default@ProcessCompiledResources... after 6 ms 
+[2026-06-23T16:52:31.538] [DEBUG] debug-file - Executing task :phone:default@PackageHap
+[2026-06-23T16:52:31.698] [DEBUG] debug-file - Incremental task phone:default@PackageHap pre-execution cost: 152 ms .
+[2026-06-23T16:52:31.698] [DEBUG] debug-file - phone : default@PackageHap cost memory 1.35382080078125
+[2026-06-23T16:52:31.702] [INFO] debug-file - UP-TO-DATE :phone:default@PackageHap...  
+[2026-06-23T16:52:31.708] [DEBUG] debug-file - Executing task :phone:default@PackingCheck
+[2026-06-23T16:52:31.741] [DEBUG] debug-file - phone : default@PackingCheck cost memory 0.6279220581054688
+[2026-06-23T16:52:31.742] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 25 s 224 ms 
+[2026-06-23T16:52:31.743] [INFO] debug-file - Finished :phone:default@PackingCheck... after 34 ms 
+[2026-06-23T16:52:31.749] [DEBUG] debug-file - Executing task :phone:default@SignHap
+[2026-06-23T16:52:31.750] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in F:\MultiCommunityApplication\build-profile.json5.
+[2026-06-23T16:52:31.754] [DEBUG] debug-file - phone:default@SignHap is not up-to-date, since the output file 'F:\MultiCommunityApplication\products\phone\build\default\outputs\default\phone-default-signed.hap' does not exist.
+[2026-06-23T16:52:31.754] [DEBUG] debug-file - Incremental task phone:default@SignHap pre-execution cost: 2 ms .
+[2026-06-23T16:52:31.757] [DEBUG] debug-file - phone : default@SignHap cost memory 0.11312103271484375
+[2026-06-23T16:52:31.758] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 25 s 240 ms 
+[2026-06-23T16:52:31.759] [INFO] debug-file - Finished :phone:default@SignHap... after 9 ms 
+[2026-06-23T16:52:31.765] [DEBUG] debug-file - Executing task :phone:default@CollectDebugSymbol
+[2026-06-23T16:52:31.769] [DEBUG] debug-file - phone : default@CollectDebugSymbol cost memory 0.092803955078125
+[2026-06-23T16:52:31.770] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 25 s 252 ms 
+[2026-06-23T16:52:31.771] [INFO] debug-file - Finished :phone:default@CollectDebugSymbol... after 6 ms 
+[2026-06-23T16:52:31.772] [DEBUG] debug-file - Executing task :phone:assembleHap
+[2026-06-23T16:52:31.773] [DEBUG] debug-file - phone : assembleHap cost memory 0.017303466796875
+[2026-06-23T16:52:31.774] [DEBUG] debug-file - runTaskFromQueue task cost before running: 1 min 25 s 256 ms 
+[2026-06-23T16:52:31.775] [INFO] debug-file - Finished :phone:assembleHap... after 2 ms 
+[2026-06-23T16:52:31.802] [INFO] debug-file - BUILD SUCCESSFUL in 1 min 25 s 284 ms 
+[2026-06-23T16:52:31.806] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.807] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task hot:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.807] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task rank:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.807] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task base:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.808] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task detail:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.808] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task picture:default@PreBuild is up-to-date.
+[2026-06-23T16:52:31.808] [DEBUG] debug-file - Update task phone:default@CreateModuleInfo output file:F:\MultiCommunityApplication\products\phone\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2026-06-23T16:52:31.809] [DEBUG] debug-file - Incremental task phone:default@CreateModuleInfo post-execution cost:2 ms .
+[2026-06-23T16:52:31.810] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@GenerateMetadata is up-to-date.
+[2026-06-23T16:52:31.810] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@GeneratePkgContextInfo is up-to-date.
+[2026-06-23T16:52:31.812] [DEBUG] debug-file - Update task phone:default@ProcessIntegratedHsp output file:F:\MultiCommunityApplication\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2026-06-23T16:52:31.813] [DEBUG] debug-file - Incremental task phone:default@ProcessIntegratedHsp post-execution cost:2 ms .
+[2026-06-23T16:52:31.813] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task base:default@CreateHarBuildProfile is up-to-date.
+[2026-06-23T16:52:31.814] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task base:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.814] [DEBUG] debug-file - Update task phone:default@SyscapTransform input file:F:\DevEco Studio\sdk\default\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2026-06-23T16:52:31.815] [DEBUG] debug-file - Update task phone:default@SyscapTransform input file:F:\DevEco Studio\sdk\default\openharmony\ets\api\device-define cache by regenerate.
+[2026-06-23T16:52:31.820] [DEBUG] debug-file - Update task phone:default@SyscapTransform output file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2026-06-23T16:52:31.821] [DEBUG] debug-file - Incremental task phone:default@SyscapTransform post-execution cost:7 ms .
+[2026-06-23T16:52:31.821] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@ProcessRouterMap is up-to-date.
+[2026-06-23T16:52:31.821] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@ProcessShareConfig is up-to-date.
+[2026-06-23T16:52:31.823] [DEBUG] debug-file - Update task phone:default@ProcessStartupConfig input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\loader\default\pkgContextInfo.json cache by regenerate.
+[2026-06-23T16:52:31.824] [DEBUG] debug-file - Update task phone:default@ProcessStartupConfig output file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\startup\default\startup_config.json cache.
+[2026-06-23T16:52:31.825] [DEBUG] debug-file - Incremental task phone:default@ProcessStartupConfig post-execution cost:4 ms .
+[2026-06-23T16:52:31.825] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task detail:default@CreateHarBuildProfile is up-to-date.
+[2026-06-23T16:52:31.826] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task rank:default@CreateHarBuildProfile is up-to-date.
+[2026-06-23T16:52:31.826] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task detail:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.826] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task rank:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.827] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@GenerateLoaderJson is up-to-date.
+[2026-06-23T16:52:31.827] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task picture:default@CreateHarBuildProfile is up-to-date.
+[2026-06-23T16:52:31.827] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task hot:default@CreateHarBuildProfile is up-to-date.
+[2026-06-23T16:52:31.827] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task picture:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task hot:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@CreateBuildProfile is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task base:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@MergeProfile is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task base:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.828] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@MakePackInfo is up-to-date.
+[2026-06-23T16:52:31.829] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@ProcessProfile is up-to-date.
+[2026-06-23T16:52:31.829] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@ProcessResource is up-to-date.
+[2026-06-23T16:52:31.829] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task detail:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.829] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task rank:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.829] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@CompileResource is up-to-date.
+[2026-06-23T16:52:31.830] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task detail:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.830] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task rank:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.830] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@CompileArkTS is up-to-date.
+[2026-06-23T16:52:31.836] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\loader\default cache by regenerate.
+[2026-06-23T16:52:31.841] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\features\hot\Index.ets cache by regenerate.
+[2026-06-23T16:52:31.842] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\commons\base\Index.ets cache by regenerate.
+[2026-06-23T16:52:31.843] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\features\detail\Index.ets cache by regenerate.
+[2026-06-23T16:52:31.844] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\features\rank\Index.ets cache by regenerate.
+[2026-06-23T16:52:31.845] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\features\picture\Index.ets cache by regenerate.
+[2026-06-23T16:52:31.846] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2026-06-23T16:52:31.848] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2026-06-23T16:52:31.849] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2026-06-23T16:52:31.850] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2026-06-23T16:52:31.852] [DEBUG] debug-file - Update task phone:default@BuildJS input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\loader\default\pkgContextInfo.json cache by regenerate.
+[2026-06-23T16:52:31.852] [DEBUG] debug-file - Update task phone:default@BuildJS output file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\loader_out\default\js cache.
+[2026-06-23T16:52:31.854] [DEBUG] debug-file - Incremental task phone:default@BuildJS post-execution cost:24 ms .
+[2026-06-23T16:52:31.854] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task picture:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.854] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task hot:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task picture:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task hot:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@ProcessLibs is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@DoNativeStrip is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@CacheNativeLibs is up-to-date.
+[2026-06-23T16:52:31.855] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@GeneratePkgModuleJson is up-to-date.
+[2026-06-23T16:52:31.856] [DEBUG] debug-file - Incremental task phone:default@ProcessCompiledResources post-execution cost:1 ms .
+[2026-06-23T16:52:31.856] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task phone:default@PackageHap is up-to-date.
+[2026-06-23T16:52:31.856] [DEBUG] debug-file - Update task phone:default@SignHap input file:F:\MultiCommunityApplication\products\phone\build\default\outputs\default\phone-default-unsigned.hap cache by regenerate.
+[2026-06-23T16:52:31.857] [DEBUG] debug-file - Update task phone:default@SignHap output file:F:\MultiCommunityApplication\products\phone\build\default\outputs\default\phone-default-signed.hap cache.
+[2026-06-23T16:52:31.858] [DEBUG] debug-file - Incremental task phone:default@SignHap post-execution cost:2 ms .
+[2026-06-23T16:52:31.859] [DEBUG] debug-file - Update task phone:default@CollectDebugSymbol input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2026-06-23T16:52:31.860] [DEBUG] debug-file - Update task phone:default@CollectDebugSymbol input file:F:\MultiCommunityApplication\products\phone\build\default\intermediates\libs\default cache by regenerate.
+[2026-06-23T16:52:31.861] [DEBUG] debug-file - Update task phone:default@CollectDebugSymbol output file:F:\MultiCommunityApplication\products\phone\build\default\outputs\default\symbol cache.
+[2026-06-23T16:52:31.862] [DEBUG] debug-file - Incremental task phone:default@CollectDebugSymbol post-execution cost:4 ms .
+[2026-06-23T16:52:31.993] [DEBUG] debug-file - Cleanup worker 0.
+[2026-06-23T16:52:31.995] [DEBUG] debug-file - Worker 0 has been cleaned up.
+[2026-06-23T16:52:31.996] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-06-23T16:52:31.996] [DEBUG] debug-file - Current resident worker size: 2.
+[2026-06-23T16:52:31.996] [DEBUG] debug-file - Cleanup worker 1.
+[2026-06-23T16:52:31.996] [DEBUG] debug-file - Worker 1 has been cleaned up.
+[2026-06-23T16:52:31.997] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-06-23T16:52:31.997] [DEBUG] debug-file - Current resident worker size: 2.
+[2026-06-23T16:52:32.009] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-06-23T16:52:32.011] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-06-23T16:52:32.018] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-06-23T16:52:32.039] [DEBUG] debug-file - worker[0] exits with exit code 1.
+[2026-06-23T16:52:32.041] [DEBUG] debug-file - worker[1] exits with exit code 1.
+[2026-06-23T16:52:32.070] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-06-23T16:52:32.071] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.

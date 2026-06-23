@@ -45,7 +45,7 @@
 
 **效果展示：**
 
-![](screenshots/features/stance-vote.png)
+![](screenshots/functions/stance-vote.png)
 
 #### 2. 评论情绪热力图
 - 每条评论下方显示情绪分析结果
@@ -55,7 +55,7 @@
 
 **效果展示：**
 
-![](screenshots/features/emotion-heatmap.png)
+![](screenshots/functions/emotion-heatmap.png)
 
 #### 3. 评论价值判断
 - 高质量评论会显示"深度分析"、"专业评论"等蓝色标签，优先展示
@@ -65,7 +65,7 @@
 
 **效果展示：**
 
-![](screenshots/features/comment-quality.png)
+![](screenshots/functions/comment-quality.png)
 
 #### 4. 图对图评论互动
 - 评论区支持上传图片、短视频、表情包进行回复
@@ -79,7 +79,7 @@
 
 **效果展示：**
 
-![](screenshots/features/media-comment.png)
+![](screenshots/functions/media-comment.png)
 
 #### 5. 收藏点赞功能
 - 评论和帖子支持点赞和收藏功能
