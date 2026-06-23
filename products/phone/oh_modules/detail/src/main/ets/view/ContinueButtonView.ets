@@ -57,7 +57,7 @@ export struct ContinueButtonView {
         offsetX: 0,
         offsetY: 4
       })
-      .margin({ right: 20, bottom: 20 })
+      .margin({ right: 20, bottom: 80 })
       .onClick(() => {
         this.showContinuePanel = true;
       })

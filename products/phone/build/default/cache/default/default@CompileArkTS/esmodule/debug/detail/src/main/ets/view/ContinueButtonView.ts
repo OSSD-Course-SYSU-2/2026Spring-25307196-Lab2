@@ -82,7 +82,7 @@ export class ContinueButtonView extends ViewPU {
                 offsetY: 4
             });
             // 流转按钮
-            Button.margin({ right: 20, bottom: 20 });
+            Button.margin({ right: 20, bottom: 80 });
             // 流转按钮
             Button.onClick(() => {
                 this.showContinuePanel = true;

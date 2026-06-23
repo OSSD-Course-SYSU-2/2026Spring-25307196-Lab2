@@ -35,6 +35,67 @@ The figure shows the effect on the Tablet:
 5. Tap an image on the hot topics page to go to the image details page. Only images are displayed on mobile phones, while the content and comments are displayed with images on foldable phones and tablets. Tap the image or the back button to return to the hot topics page.
 6. Tap the widget body on the hot topics page to go to the details page. The text area on the details page can be zoomed in or out with two fingers. You can tap the button in the upper right corner of the foldable phone to switch between the left-right layout and top-down layout. Tap the back button to return to the hot topics page.
 
+### Page Description
+
+#### 1. Home Page
+- Personalized content recommendation display
+- **Search Function**:
+  - Top search bar for searching content of interest
+  - Quick access to personal center
+- **Banner Display**:
+  - Auto-rotating popular content
+  - Support manual swipe switching
+  - Indicator position display
+- **Quick Access**:
+  - Four quick entries: Recommend, Follow, Hot, Local
+  - One-tap jump to corresponding category
+- **Recommendation List**:
+  - Intelligent recommendation of quality content cards
+  - Display user info and publish time
+  - Support like and comment interactions
+
+#### 2. Hot Topics Page
+- Popular content aggregation display
+- **Hot Search Rankings**:
+  - Multiple category hot search rankings (Today, News, Local, Entertainment, Food)
+  - Real-time update of popular topics
+  - Click to view complete ranking
+- **Follow List**:
+  - Latest updates from followed users
+  - Image and video content display
+  - Support like, comment, share
+- **Discover Content**:
+  - Recommend quality content
+  - Various content format display
+
+#### 3. Message Page
+- Unified message management platform
+- **Message Categories**:
+  - Interaction: Like, comment and other interaction notifications
+  - System: Platform announcements, event notifications
+  - Private Message: User-to-user private communication
+  - System Messages: Account security, system reminders
+- **Message List**:
+  - Unread message count badge
+  - Message content preview
+  - Message time display
+  - Click to view detailed content
+
+#### 4. Mine Page
+- Complete user information management
+- **User Info Card**:
+  - Avatar, nickname, ID display
+  - Gradient background design
+  - Statistics: Following, Followers, Likes, Favorites
+- **Content Management**:
+  - My Posts: View all published content
+  - My Favorites: View favorited content
+  - My Comments: View posted comments
+- **More Features**:
+  - Browse History: View browsing records
+  - Account Settings: Personal information settings
+  - Help & Feedback: User support
+
 ### New Features
 
 #### 1. Stance Voting
@@ -129,6 +190,29 @@ The figure shows the effect on the Tablet:
   - Visual feedback on tap for enhanced user experience
   - Smooth state transitions, support repeated operations
 
+#### 7. Post Creation Feature
+- Users can publish content with text and images
+- **Post Entry**:
+  - "+" button in bottom-right corner of home page, red circular button
+  - Click to open post creation dialog
+- **Post Dialog**:
+  - Text input: Supports multi-line text input with placeholder "Share your thoughts..."
+  - Image upload: Click "Select Image" button to choose from album, up to 9 images
+  - Image preview: Selected images displayed in grid, "×" in top-right corner to delete
+  - Count indicator: Shows selected image count (e.g., "3/9")
+  - Publish button: Can publish after entering content or selecting images
+- **My Posts**:
+  - In "Mine" page, click "My Posts" menu item to view published posts
+  - Displays post content, images, and publish time
+  - Time display: Just now, X minutes ago, X hours ago, X days ago
+  - Shows empty state prompt when no content
+- **Data Management**:
+  - Use @StorageLink('userPosts') to share post data
+  - New posts added to top of list
+  - Supports cross-page data synchronization
+- **Permission Requirements**:
+  - Requires album read permission (ohos.permission.READ_IMAGEVIDEO)
+
 ## Project Directory
 ```
 ├──commons/base/src/main/ets                       // Common capability layer
@@ -211,14 +295,17 @@ The figure shows the effect on the Tablet:
       │  ├──entryability
       │  │  └──EntryAbility.ets                    // Application entry
       │  ├──model
-      │  │  └──TabBarModel.ets                     // Tab bar entity
-      │  ├──pages
-      │  │  └──MainPage.ets                        // Main page
-      │  ├──view
-      │  │  └──TabContentView.ets                  // Tab content of home page
-      │  └──viewmodel
-      │     └──TabBarViewModel.ets                 // Tab bar management
-      └──resources                                 // Resource file directory
+       │  │  └──TabBarModel.ets                     // Tab bar entity
+       │  ├──pages
+       │  │  ├──MainPage.ets                        // Main page
+       │  │  ├──HomePage.ets                        // Home page
+       │  │  ├──MessagePage.ets                     // Message page
+       │  │  └──MinePage.ets                        // Mine page
+       │  ├──view
+       │  │  └──TabContentView.ets                  // Tab content of home page
+       │  └──viewmodel
+       │     └──TabBarViewModel.ets                 // Tab bar management
+       └──resources                                 // Resource file directory
 ```
 
 ## How to Implement
@@ -298,6 +385,34 @@ The GridRow and GridCol components are used to implement a community comment pag
   - Use `.opacity()` to control favorite icon transparency for visual feedback
   - States saved independently, likes and favorites don't affect each other
 
+#### Post Creation Feature
+- **Components**:
+  - `HomePage.ets` (post button, post dialog)
+  - `MinePage.ets` (my posts page)
+- **Data Structures**:
+  - `PostData` interface (post data)
+  - `id`: Post ID (number)
+  - `content`: Post content (string)
+  - `images`: Image URI array (string[])
+  - `timestamp`: Publish timestamp (number)
+- **State Management**:
+  - `showPostDialog`: Post dialog display status (boolean)
+  - `postContent`: Post text content (string)
+  - `selectedImages`: Selected image URI array (string[])
+  - `userPosts`: User published posts list (PostData[])
+- **Implementation**:
+  - Circular button in bottom-right corner of home page, click to open post dialog
+  - Post dialog uses semi-transparent overlay, pops up from bottom
+  - TextArea component for multi-line text input
+  - Use HarmonyOS PhotoViewPicker API to select images from album
+  - Selected images displayed in Grid component, "×" button in top-right corner to delete
+  - Image count limited to 9, displays "selected count/9" indicator
+  - Publish button creates PostData object on click, adds to top of userPosts array
+  - Use @StorageLink('userPosts') for cross-page data sharing
+  - My posts page uses List component to display post list
+  - Time formatting function converts timestamp to friendly display (Just now, X minutes ago, etc.)
+  - Empty state uses Column centered display with prompt text
+
 #### Free Flow Feature
 - **Components**: `ContinueButtonView.ets` (flow button), `ContinuePanelView.ets` (flow panel)
 - **Services**: `DeviceManagerService.ets` (device management), `ContinueService.ets` (flow service)
@@ -319,6 +434,7 @@ The GridRow and GridCol components are used to implement a community comment pag
 The following permissions are required:
 - `ohos.permission.DISTRIBUTED_DATASYNC`: Distributed data synchronization permission
 - `ohos.permission.GET_DISTRIBUTED_DEVICE_INFO`: Permission to get distributed device information
+- `ohos.permission.READ_IMAGEVIDEO`: Permission to read images and videos (post creation feature)
 
 ## Constraints
 

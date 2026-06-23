@@ -2635,5 +2635,9 @@
 			"type":	"string",
 			"name":	"content_50",
 			"id":	"0x04000292"
+		}, {
+			"type":	"string",
+			"name":	"permission_read_imagevideo_reason",
+			"id":	"0x04000293"
 		}]
 }

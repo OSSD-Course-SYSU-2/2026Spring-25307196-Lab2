@@ -27,6 +27,14 @@
     {
       "name": "mine",
       "value": "Mine"
+    },
+    {
+      "name": "permission_distributed_datasync_reason",
+      "value": "用于多设备间的应用流转和数据同步"
+    },
+    {
+      "name": "permission_read_imagevideo_reason",
+      "value": "用于发帖时选择和上传图片"
     }
   ]
 }

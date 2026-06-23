@@ -18,6 +18,9 @@ import { HotPointPage } from 'hot';
 import { ContinueButtonView, ContinuePanelView } from 'detail';
 import { BarItemInterface } from '../model/TabBarModel';
 import { TabBarViewModel } from '../viewmodel/TabBarViewModel';
+import { HomePage } from '../pages/HomePage';
+import { MessagePage } from '../pages/MessagePage';
+import { MinePage } from '../pages/MinePage';
 
 @Component
 export struct TabContentView {
@@ -62,7 +65,7 @@ export struct TabContentView {
           index: this.currentIndex
         }) {
           TabContent() {
-            this.DefaultTabBuilder($r('app.string.main'))
+            HomePage()
           }
           .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[0], 0))
 
@@ -72,12 +75,12 @@ export struct TabContentView {
           .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[1], 1))
 
           TabContent() {
-            this.DefaultTabBuilder($r('app.string.message'))
+            MessagePage()
           }
           .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[2], 2))
 
           TabContent() {
-            this.DefaultTabBuilder($r('app.string.mine'))
+            MinePage()
           }
           .tabBar(this.TabBarBuilder(this.tabBarsInfo.getTabList()[3], 3))
         }

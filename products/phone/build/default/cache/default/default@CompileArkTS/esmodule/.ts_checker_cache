@@ -105,7 +105,15 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.distributedDeviceManager.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.wantAgent.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.wantAgent.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataShare.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedDataObject.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedKVStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendablePreferences.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
       ],
       "error": false
     },
@@ -152,7 +160,8 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.ability.featureAbility.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\folder_stack.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\nav_destination.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\navigation.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\navigation.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts"
       ],
       "error": false
     },
@@ -223,7 +232,10 @@
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\MediaGalleryView.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\MediaPickerView.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinuePanelView.ets",
-        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets"
+        "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MessagePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MinePage.ets"
       ],
       "error": false
     },
@@ -544,7 +556,12 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\Context.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.common.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\app\\context.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.rdb.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.rdb.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedDataObject.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedKVStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendablePreferences.d.ets"
       ],
       "error": false
     },
@@ -569,7 +586,9 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\PhotoEditorExtensionContext.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimodalInput.pointer.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.uniformDataStruct.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
       ],
       "error": false
     },
@@ -1096,7 +1115,9 @@
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\ExtensionContext.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\AbilityStageContext.d.ts",
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.print.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
       ],
       "error": false
     },
@@ -1230,7 +1251,8 @@
       ],
       "parent": [
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.dragController.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
       ],
       "error": false
     },
@@ -1416,7 +1438,8 @@
       ],
       "parent": [
         "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\dataAbilityHelper.d.ts",
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\dataAbilityOperation.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\dataAbilityOperation.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
       ],
       "error": false
     },
@@ -1739,13 +1762,16 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets": {
-      "mtimeMs": 1780390805142.486,
+      "mtimeMs": 1782207406841.008,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
         "F:\\MultiCommunityApplication\\features\\hot\\Index.ets",
         "F:\\MultiCommunityApplication\\features\\detail\\Index.ets",
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\model\\TabBarModel.ets",
-        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\viewmodel\\TabBarViewModel.ets"
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\viewmodel\\TabBarViewModel.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MessagePage.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MinePage.ets"
       ],
       "parent": [
         "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MainPage.ets"
@@ -2083,7 +2109,8 @@
         "F:\\MultiCommunityApplication\\features\\hot\\src\\main\\ets\\view\\HotPointPage.ets"
       ],
       "parent": [
-        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets"
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets",
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets"
       ],
       "error": false
     },
@@ -2268,7 +2295,8 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
-        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
       ],
       "error": false
     },
@@ -2839,12 +2867,276 @@
       "error": false
     },
     "F:\\MultiCommunityApplication\\features\\detail\\src\\main\\ets\\view\\ContinueButtonView.ets": {
-      "mtimeMs": 1780390734812.296,
+      "mtimeMs": 1782208568834.0627,
       "children": [
         "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
       ],
       "parent": [
         "F:\\MultiCommunityApplication\\features\\detail\\Index.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets": {
+      "mtimeMs": 1782210397287.8628,
+      "children": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MessagePage.ets": {
+      "mtimeMs": 1782207406832.7046,
+      "children": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets"
+      ],
+      "error": false
+    },
+    "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\MinePage.ets": {
+      "mtimeMs": 1782210581941.344,
+      "children": [
+        "F:\\MultiCommunityApplication\\commons\\base\\Index.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\view\\TabContentView.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.picker.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\Context.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.window.d.ts"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.cloudData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.cloudExtension.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.commonType.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataAbility.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataShare.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataSharePredicates.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedDataObject.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedKVStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.unifiedDataChannel.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.uniformTypeDescriptor.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.uniformDataStruct.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.ValuesBucket.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendablePreferences.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.intelligence.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.UdmfComponents.d.ets"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.cloudData.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.commonType.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.cloudExtension.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.commonType.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.cloudData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedDataObject.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataShare.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.ValuesBucket.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataSharePredicates.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.ValuesBucket.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedDataObject.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.commonType.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.distributedKVStore.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.preferences.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.uniformDataStruct.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.image.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.UdmfComponents.d.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.ValuesBucket.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataShare.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataSharePredicates.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendablePreferences.d.ets": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\BaseContext.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.lang.d.ets"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.collections.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.lang.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.relationalStore.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.intelligence.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.UdmfComponents.d.ets": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.uniformDataStruct.d.ts"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\kits\\@kit.ArkData.d.ts"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.collections.d.ets": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.lang.d.ets"
+      ],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.lang.d.ets": {
+      "mtimeMs": 1774582692000,
+      "children": [],
+      "parent": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendableRelationalStore.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\arkts\\@arkts.collections.d.ets",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.sendablePreferences.d.ets"
+      ],
+      "error": false
+    },
+    "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.file.photoAccessHelper.d.ts": {
+      "mtimeMs": 1774582692000,
+      "children": [
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\Context.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.image.d.ts",
+        "F:\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.dataSharePredicates.d.ts"
+      ],
+      "parent": [
+        "F:\\MultiCommunityApplication\\products\\phone\\src\\main\\ets\\pages\\HomePage.ets"
       ],
       "error": false
     }

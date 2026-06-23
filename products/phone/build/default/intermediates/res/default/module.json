@@ -60,6 +60,14 @@
 					"when":	"inuse"
 				},
 				"reasonId":	67109450
+			}, {
+				"name":	"ohos.permission.READ_IMAGEVIDEO",
+				"reason":	"$string:permission_read_imagevideo_reason",
+				"usedScene":	{
+					"abilities":	["EntryAbility"],
+					"when":	"inuse"
+				},
+				"reasonId":	67109523
 			}],
 		"packageName":	"phone",
 		"virtualMachine":	"ark12.0.6.0",

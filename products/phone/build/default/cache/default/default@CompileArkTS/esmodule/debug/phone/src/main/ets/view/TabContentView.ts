@@ -12,6 +12,9 @@ import { HotPointPage } from "@normalized:N&&&hot/Index&1.0.0";
 import { ContinueButtonView, ContinuePanelView } from "@normalized:N&&&detail/Index&1.0.0";
 import type { BarItemInterface } from '../model/TabBarModel';
 import { TabBarViewModel } from "@normalized:N&&&phone/src/main/ets/viewmodel/TabBarViewModel&";
+import { HomePage } from "@normalized:N&&&phone/src/main/ets/pages/HomePage&";
+import { MessagePage } from "@normalized:N&&&phone/src/main/ets/pages/MessagePage&";
+import { MinePage } from "@normalized:N&&&phone/src/main/ets/pages/MinePage&";
 export class TabContentView extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
         super(parent, __localStorage, elmtId, extraInfo);
@@ -136,7 +139,21 @@ export class TabContentView extends ViewPU {
         }, Tabs);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             TabContent.create(() => {
-                this.DefaultTabBuilder.bind(this)({ "id": 67108871, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        if (isInitialRender) {
+                            let componentCall = new HomePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 68, col: 13 });
+                            ViewPU.create(componentCall);
+                            let paramsLambda = () => {
+                                return {};
+                            };
+                            componentCall.paramsGenerator_ = paramsLambda;
+                        }
+                        else {
+                            this.updateStateVarsOfChildByElmtId(elmtId, {});
+                        }
+                    }, { name: "HomePage" });
+                }
             });
             TabContent.tabBar({ builder: () => {
                     this.TabBarBuilder.call(this, this.tabBarsInfo.getTabList()[0], 0);
@@ -148,7 +165,7 @@ export class TabContentView extends ViewPU {
                 {
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         if (isInitialRender) {
-                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 70, col: 13 });
+                            let componentCall = new HotPointPage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 73, col: 13 });
                             ViewPU.create(componentCall);
                             let paramsLambda = () => {
                                 return {};
@@ -168,7 +185,21 @@ export class TabContentView extends ViewPU {
         TabContent.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             TabContent.create(() => {
-                this.DefaultTabBuilder.bind(this)({ "id": 67108872, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        if (isInitialRender) {
+                            let componentCall = new MessagePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 78, col: 13 });
+                            ViewPU.create(componentCall);
+                            let paramsLambda = () => {
+                                return {};
+                            };
+                            componentCall.paramsGenerator_ = paramsLambda;
+                        }
+                        else {
+                            this.updateStateVarsOfChildByElmtId(elmtId, {});
+                        }
+                    }, { name: "MessagePage" });
+                }
             });
             TabContent.tabBar({ builder: () => {
                     this.TabBarBuilder.call(this, this.tabBarsInfo.getTabList()[2], 2);
@@ -177,7 +208,21 @@ export class TabContentView extends ViewPU {
         TabContent.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             TabContent.create(() => {
-                this.DefaultTabBuilder.bind(this)({ "id": 67108873, "type": 10003, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" });
+                {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        if (isInitialRender) {
+                            let componentCall = new MinePage(this, {}, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 83, col: 13 });
+                            ViewPU.create(componentCall);
+                            let paramsLambda = () => {
+                                return {};
+                            };
+                            componentCall.paramsGenerator_ = paramsLambda;
+                        }
+                        else {
+                            this.updateStateVarsOfChildByElmtId(elmtId, {});
+                        }
+                    }, { name: "MinePage" });
+                }
             });
             TabContent.tabBar({ builder: () => {
                     this.TabBarBuilder.call(this, this.tabBarsInfo.getTabList()[3], 3);
@@ -191,7 +236,7 @@ export class TabContentView extends ViewPU {
                 if (isInitialRender) {
                     let componentCall = new 
                     // 流转悬浮按钮
-                    ContinueButtonView(this, { showContinuePanel: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 100, col: 7 });
+                    ContinueButtonView(this, { showContinuePanel: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 103, col: 7 });
                     ViewPU.create(componentCall);
                     let paramsLambda = () => {
                         return {
@@ -230,7 +275,7 @@ export class TabContentView extends ViewPU {
                     {
                         this.observeComponentCreation2((elmtId, isInitialRender) => {
                             if (isInitialRender) {
-                                let componentCall = new ContinuePanelView(this, { isVisible: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 107, col: 11 });
+                                let componentCall = new ContinuePanelView(this, { isVisible: this.__showContinuePanel }, undefined, elmtId, () => { }, { page: "products/phone/src/main/ets/view/TabContentView.ets", line: 110, col: 11 });
                                 ViewPU.create(componentCall);
                                 let paramsLambda = () => {
                                     return {
