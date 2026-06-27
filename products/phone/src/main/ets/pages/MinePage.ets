@@ -17,7 +17,7 @@ import { BreakpointConstants as Breakpoint, CommonConstants as Common } from 'ba
 
 // 菜单项接口
 interface MenuItem {
-  icon: Resource;
+  icon?: Resource;
   title: string;
   count: string;
 }
@@ -39,14 +39,14 @@ export struct MinePage {
   // 菜单数据
   private contentMenuItems: MenuItem[] = [
     { icon: $r('app.media.ic_toolbar_heart'), title: '我的发布', count: '36' },
-    { icon: $r('app.media.ic_state_favor'), title: '我的收藏', count: '128' },
+    { icon: $r('app.media.ic_toolbar_star'), title: '我的收藏', count: '128' },
     { icon: $r('app.media.ic_toolbar_comment'), title: '我的评论', count: '256' }
   ];
 
   private moreMenuItems: MenuItem[] = [
-    { icon: $r('app.media.ic_toolbar_share'), title: '浏览历史', count: '' },
-    { icon: $r('app.media.ic_state_new'), title: '账号设置', count: '' },
-    { icon: $r('app.media.ic_state_fire'), title: '帮助与反馈', count: '' }
+    { title: '浏览历史', count: '' },
+    { title: '账号设置', count: '' },
+    { title: '帮助与反馈', count: '' }
   ];
 
   build() {
@@ -154,7 +154,7 @@ export struct MinePage {
                 .width('100%')
                 .height(0.5)
                 .color('#F0F0F0')
-                .margin({ left: 52 })
+                .margin({ left: item.icon ? 52 : 16 })
             }
           }
         })
@@ -167,16 +167,18 @@ export struct MinePage {
   }
 
   @Builder
-  MenuItem(icon: Resource, title: string, count: string) {
+  MenuItem(icon: Resource | undefined, title: string, count: string) {
     Row() {
-      Image(icon)
-        .width(22)
-        .height(22)
-        .margin({ left: 16 })
+      if (icon) {
+        Image(icon)
+          .width(22)
+          .height(22)
+          .margin({ left: 16 })
+      }
 
       Text(title)
         .fontSize(15)
-        .margin({ left: 12 })
+        .margin({ left: icon ? 12 : 16 })
         .layoutWeight(1)
 
       if (count !== '') {
