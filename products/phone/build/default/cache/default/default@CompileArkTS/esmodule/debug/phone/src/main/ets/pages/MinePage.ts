@@ -11,7 +11,7 @@ interface MinePage_Params {
 import { BreakpointConstants as Breakpoint } from "@normalized:N&&&base/Index&1.0.0";
 // 菜单项接口
 interface MenuItem {
-    icon: Resource;
+    icon?: Resource;
     title: string;
     count: string;
 }
@@ -33,13 +33,13 @@ export class MinePage extends ViewPU {
         this.__showMyPosts = new ObservedPropertySimplePU(false, this, "showMyPosts");
         this.contentMenuItems = [
             { icon: { "id": 67109250, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '我的发布', count: '36' },
-            { icon: { "id": 67109244, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '我的收藏', count: '128' },
+            { icon: { "id": 67109383, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '我的收藏', count: '128' },
             { icon: { "id": 67109377, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '我的评论', count: '256' }
         ];
         this.moreMenuItems = [
-            { icon: { "id": 67109251, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '浏览历史', count: '' },
-            { icon: { "id": 67109246, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '账号设置', count: '' },
-            { icon: { "id": 67109245, "type": 20000, params: [], "bundleName": "com.huawei.multicommunityapplication", "moduleName": "phone" }, title: '帮助与反馈', count: '' }
+            { title: '浏览历史', count: '' },
+            { title: '账号设置', count: '' },
+            { title: '帮助与反馈', count: '' }
         ];
         this.setInitiallyProvidedValue(params);
         this.finalizeConstruction();
@@ -258,7 +258,7 @@ export class MinePage extends ViewPU {
                                 Divider.width('100%');
                                 Divider.height(0.5);
                                 Divider.color('#F0F0F0');
-                                Divider.margin({ left: 52 });
+                                Divider.margin({ left: item.icon ? 52 : 16 });
                             }, Divider);
                         });
                     }
@@ -276,7 +276,7 @@ export class MinePage extends ViewPU {
         Column.pop();
         Column.pop();
     }
-    MenuItem(icon: Resource, title: string, count: string, parent = null) {
+    MenuItem(icon: Resource | undefined, title: string, count: string, parent = null) {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
             Row.width('100%');
@@ -289,15 +289,27 @@ export class MinePage extends ViewPU {
             });
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Image.create(icon);
-            Image.width(22);
-            Image.height(22);
-            Image.margin({ left: 16 });
-        }, Image);
+            If.create();
+            if (icon) {
+                this.ifElseBranchUpdateFunction(0, () => {
+                    this.observeComponentCreation2((elmtId, isInitialRender) => {
+                        Image.create(icon);
+                        Image.width(22);
+                        Image.height(22);
+                        Image.margin({ left: 16 });
+                    }, Image);
+                });
+            }
+            else {
+                this.ifElseBranchUpdateFunction(1, () => {
+                });
+            }
+        }, If);
+        If.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create(title);
             Text.fontSize(15);
-            Text.margin({ left: 12 });
+            Text.margin({ left: icon ? 12 : 16 });
             Text.layoutWeight(1);
         }, Text);
         Text.pop();

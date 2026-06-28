@@ -76,7 +76,8 @@
 
   **效果展示：**
 
-  ![](screenshots/pages/hot.png)
+  ![](screenshots/pages/hot1.png)
+  ![](screenshots/pages/hot2.png)
 
 #### 3. 消息页
 - 统一消息管理平台
@@ -229,6 +230,41 @@
   - 支持跨页面数据同步
 - **权限要求**：
   - 需要相册读取权限（ohos.permission.READ_IMAGEVIDEO）
+
+  **效果展示：**
+
+  ![](screenshots/functions/post.png)
+
+#### 8. 自由流转功能
+- 支持应用在不同设备间的流转
+- **流转模式**：
+  - 迁移：将应用从当前设备迁移到目标设备继续使用
+  - 协同：多设备协同工作，实现跨设备互动
+  - 同步：将应用状态同步到其他设备
+- **设备识别**：
+  - 自动识别可用设备：手机、平板、折叠屏、智慧屏
+  - 设备列表展示设备名称和类型
+- **流转控制**：
+  - 实时显示流转进度和状态
+  - 支持取消流转操作
+  - 流转完成后自动跳转到目标设备
+- **权限要求**：
+  - 需要分布式数据同步权限（ohos.permission.DISTRIBUTED_DATASYNC）
+  - 需要获取设备信息权限（ohos.permission.GET_DISTRIBUTED_DEVICE_INFO）
+
+  **效果展示：**
+
+![](screenshots/functions/free-transference.png)
+
+## 代码结构├── commons/base/src/main/ets                       // 公共能力层
+│  ├──constants
+│  │  ├──BreakpointConstants.ets                   // 断点常量类
+│  │  ├──BreakpointType.ets                        // 断点类型类
+│  │  └──CommonConstants.ets                       // 公共常量类
+│  ├──model
+│  │  ├──AICommentModel.ets                        // AI评论实体类
+│  │  ├──CardListModel.ets                         // 卡片实体类
+
 
 
 ## 工程目录

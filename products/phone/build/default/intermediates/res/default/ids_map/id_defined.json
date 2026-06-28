@@ -2639,5 +2639,9 @@
 			"type":	"string",
 			"name":	"permission_read_imagevideo_reason",
 			"id":	"0x04000293"
+		}, {
+			"type":	"media",
+			"name":	"ic_public_star",
+			"id":	"0x04000294"
 		}]
 }

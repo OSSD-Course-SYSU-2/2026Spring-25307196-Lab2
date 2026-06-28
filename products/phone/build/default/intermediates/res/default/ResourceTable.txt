@@ -622,6 +622,7 @@ media ic_public_input_search 0x04000103
 media ic_public_more 0x04000237
 media ic_public_search 0x04000104
 media ic_public_spinner_small 0x04000105
+media ic_public_star 0x04000294
 media ic_public_voice 0x04000106
 media ic_rank_item_1 0x0400016e
 media ic_rank_item_2 0x0400016f
